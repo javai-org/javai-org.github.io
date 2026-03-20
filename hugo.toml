@@ -1,0 +1,26 @@
+baseURL = 'https://javai.org/'
+languageCode = 'en'
+title = 'Javai — Testing Non-Deterministic Systems'
+enableRobotsTXT = true
+
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+[params]
+  description = "Bringing solutions to difficult questions of testing non-deterministic systems, such as AI."
+  author = "Javai"
+  tagline = "Measure. Regress. Trust."
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menus]
+  [[menus.main]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 10
+  [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 20

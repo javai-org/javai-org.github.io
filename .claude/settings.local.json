@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo version:*)",
+      "Bash(brew install:*)",
+      "Bash(hugo new:*)",
+      "Bash(hugo:*)",
+      "Bash(curl -s http://localhost:1313/projects/)",
+      "Bash(git branch:*)",
+      "Bash(git rm:*)"
+    ]
+  }
+}

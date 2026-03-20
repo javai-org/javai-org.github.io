@@ -1,0 +1,77 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container">
+    <h1>Testing non-deterministic systems<br>with confidence</h1>
+    <p class="hero-sub">{{ .Site.Params.description }}</p>
+    <div class="hero-cta">
+      <a href="https://github.com/javai-org/punit" class="btn btn-primary">Get punit</a>
+      <a href="/projects/" class="btn btn-secondary">View all projects</a>
+    </div>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="container">
+    <h2>The Problem</h2>
+    <p>AI systems, probabilistic models, and non-deterministic processes are increasingly subject to regulatory scrutiny. Organisations must demonstrate measurable, reproducible evidence that these systems perform within acceptable bounds &mdash; not just once, but continuously.</p>
+    <p>Traditional unit testing assumes deterministic outcomes. <strong>That assumption no longer holds.</strong></p>
+
+    <h2>Our Mission</h2>
+    <p>Javai develops open-source tools that bring statistical rigour to software testing. We help engineering teams answer the questions that regulators, auditors, and risk committees are asking:</p>
+    <ul>
+      <li>How do you prove your AI behaves consistently?</li>
+      <li>How do you detect performance regression in a stochastic system?</li>
+      <li>How do you provide auditable evidence of compliance?</li>
+    </ul>
+  </div>
+</section>
+
+<section class="flagship">
+  <div class="container">
+    <div class="project-card featured">
+      <div class="project-card-body">
+        <h2>punit</h2>
+        <p class="project-tagline">Probabilistic unit testing for Java</p>
+        <p>punit extends JUnit to support statistical assertions. Define expected distributions, set confidence thresholds, and run repeatable hypothesis tests as part of your CI/CD pipeline. When your system's behaviour is non-deterministic by design, punit gives you the vocabulary to test it properly.</p>
+        <a href="https://github.com/javai-org/punit" class="btn btn-primary">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secondary-projects">
+  <div class="container">
+    <h2>Complementary Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>punit examples</h3>
+        <p>Worked examples and patterns showing punit in real-world testing scenarios &mdash; from LLM output validation to Monte Carlo simulation testing.</p>
+        <a href="https://github.com/javai-org/punitexamples">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>outcome</h3>
+        <p>A lightweight library for capturing and analysing test outcomes across runs, enabling trend analysis and regression detection over time.</p>
+        <a href="https://github.com/javai-org/outcome">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ with .Site.GetPage "/posts" }}
+  {{ if .Pages }}
+  <section class="recent-posts">
+    <div class="container">
+      <h2>Recent Posts</h2>
+      {{ range first 3 .Pages.ByDate.Reverse }}
+        <article class="post-summary">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Summary }}</p>
+        </article>
+      {{ end }}
+      <a href="/posts/" class="btn btn-secondary">All posts</a>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}
+{{ end }}
