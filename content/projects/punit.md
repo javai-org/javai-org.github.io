@@ -14,7 +14,7 @@ Instead of the traditional binary pass/fail model, punit executes a test multipl
 ## Key capabilities
 
 - **Probabilistic tests** (`@ProbabilisticTest`) — run a test method multiple times and evaluate the observed pass rate against a threshold, with configurable confidence levels
-- **Three experiment modes** — **Explore** (compare configurations with small samples), **Measure** (establish empirical baselines with 1000+ samples), and **Optimize** (iteratively tune parameters like temperature or prompts)
+- **Three experiment modes** — **Explore** (compare configurations with small samples), **Optimize** (iteratively tune parameters like temperature or prompts), and **Measure** (establish empirical baselines with 1000+ samples)
 - **Use cases and service contracts** — define reusable success criteria with postconditions, derived checks, and duration constraints, evaluated in a fail-fast hierarchy
 - **Spec-driven baselines** — measurement experiments produce YAML spec files capturing observed success rates, confidence intervals, latency percentiles, and covariate values, committed to version control as regression baselines
 - **Latency assertions** — evaluate response times at percentile level (p50, p90, p95, p99), not averages, revealing tail behaviour that means hide
@@ -22,7 +22,7 @@ Instead of the traditional binary pass/fail model, punit executes a test multipl
 - **Budget and pacing controls** — set time budgets, token budgets, and API rate limits; punit computes optimal execution pace and stops when resources are exhausted
 - **Compliance and conformance testing** — verify against mandated SLA/SLO thresholds (compliance) or detect drift from empirical baselines (conformance)
 - **Verification vs. smoke intent** — declare whether a test is an evidential claim (with enforced minimum sample sizes) or a lightweight early-warning check
-- **The Sentinel** — a JUnit-free runtime engine for running probabilistic tests in deployed environments without test framework dependencies
+- **The Sentinel** — a JUnit-free runtime engine for monitoring stochastic behaviours in deployed environments without test framework dependencies
 - **HTML reporting** — standalone reports with per-test statistical detail, confidence intervals, z-scores, latency percentiles, and covariate mismatch warnings
 
 ## The parameter triangle
