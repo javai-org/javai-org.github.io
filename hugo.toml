@@ -11,6 +11,25 @@ enableRobotsTXT = true
   description = "Bringing solutions to difficult questions of testing non-deterministic systems, such as AI."
   author = "Javai"
   tagline = "Measure. Regress. Trust."
+  ogImage = "images/hero.jpg"
+  keywords = [
+    "probabilistic testing",
+    "AI performance measurement",
+    "ISO 42001",
+    "FINMA",
+    "non-deterministic testing",
+    "AI regression testing",
+    "statistical unit testing",
+    "AI compliance",
+    "AI risk management",
+    "stochastic testing",
+    "AI governance",
+    "AI audit",
+    "machine learning testing",
+    "AI quality assurance",
+    "punit",
+    "JUnit statistical assertions"
+  ]
 
 [markup.goldmark.renderer]
   unsafe = true

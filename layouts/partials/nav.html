@@ -5,7 +5,7 @@
       {{ range .Site.Menus.main }}
         <a href="{{ .URL }}" class="{{ if $.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
       {{ end }}
-      <a href="{{ .Site.BaseURL }}index.xml" class="rss-link" title="RSS Feed">RSS</a>
+      <a href="/subscribe/" class="rss-link" title="Subscribe via RSS">RSS</a>
     </nav>
   </div>
 </header>

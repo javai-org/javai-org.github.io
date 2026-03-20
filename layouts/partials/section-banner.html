@@ -1,0 +1,15 @@
+{{- $hero := resources.Get "images/hero.jpg" -}}
+{{- $heroWebp := $hero.Resize "1920x webp q75" -}}
+{{- $heroSmall := $hero.Resize "960x webp q70" -}}
+{{- $color := .color | default "blue" -}}
+<section class="section-banner section-banner--{{ $color }}">
+  <picture class="section-banner-bg">
+    <source media="(max-width: 768px)" srcset="{{ $heroSmall.RelPermalink }}">
+    <source srcset="{{ $heroWebp.RelPermalink }}">
+    <img src="{{ $heroWebp.RelPermalink }}" alt="" loading="eager">
+  </picture>
+  <div class="container">
+    <h1>{{ .title }}</h1>
+    {{ with .subtitle }}<p class="section-banner-sub">{{ . }}</p>{{ end }}
+  </div>
+</section>

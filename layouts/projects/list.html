@@ -1,7 +1,7 @@
 {{ define "main" }}
+{{ partial "section-banner.html" (dict "title" .Title "subtitle" "Open-source Java projects for probabilistic testing and resilient operations." "color" "green") }}
 <section class="content-list">
   <div class="container">
-    <h1>{{ .Title }}</h1>
     {{ .Content }}
     {{ range .Pages.ByWeight }}
       <article class="post-summary">

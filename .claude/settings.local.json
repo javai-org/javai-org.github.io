@@ -7,7 +7,14 @@
       "Bash(hugo:*)",
       "Bash(curl -s http://localhost:1313/projects/)",
       "Bash(git branch:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(dig:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:zeb-consulting.com)",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "Bash(grep \"\\\\.java$\")"
     ]
   }
 }
