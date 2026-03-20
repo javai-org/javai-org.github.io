@@ -500,6 +500,38 @@ pre code {
   gap: var(--space-md);
 }
 
+/* ---- Project listings ---- */
+.project-listing {
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.project-listing:last-of-type { border-bottom: none; }
+
+.project-listing h2 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-xs);
+}
+.project-listing h2 a {
+  color: var(--color-accent);
+}
+.project-listing h2 a:hover {
+  color: var(--color-accent-hover);
+}
+
+.project-listing p {
+  color: var(--color-text-secondary);
+  max-width: 720px;
+  margin-bottom: var(--space-sm);
+}
+
+.project-listing-link {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* ---- Section Banners ---- */
 .section-banner {
   position: relative;

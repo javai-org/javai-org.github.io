@@ -4,9 +4,10 @@
   <div class="container">
     {{ .Content }}
     {{ range .Pages.ByWeight }}
-      <article class="post-summary">
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        <p>{{ .Summary }}</p>
+      <article class="project-listing">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Description }}</p>
+        <a href="{{ .Permalink }}" class="project-listing-link">Read more</a>
       </article>
     {{ end }}
   </div>

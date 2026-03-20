@@ -14,7 +14,13 @@
       "WebSearch",
       "WebFetch(domain:unsplash.com)",
       "WebFetch(domain:images.unsplash.com)",
-      "Bash(grep \"\\\\.java$\")"
+      "Bash(grep \"\\\\.java$\")",
+      "Bash(git remote:*)",
+      "Bash(gh repo:*)",
+      "Bash(gh api:*)",
+      "Bash(gh run:*)",
+      "Bash(python3 -m json.tool)",
+      "Bash(gh workflow:*)"
     ]
   }
 }
