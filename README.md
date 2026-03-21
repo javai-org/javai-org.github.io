@@ -4,10 +4,10 @@ This repository contains the source for [javai.org](https://javai.org/), a stati
 
 ## Domains
 
-| Domain | Purpose | Registrar |
-|--------|---------|-----------|
-| **javai.org** | Main site — open-source projects, blog posts on AI testing, probabilistic systems, and regulatory compliance | GoDaddy |
-| **javai.ch** | Reserved for Swiss-specific content — FINMA regulations, Swiss enterprise and cantonal government AI concerns | GoDaddy |
+| Domain        | Purpose                                                                                                       | Registrar |
+|---------------|---------------------------------------------------------------------------------------------------------------|-----------|
+| **javai.org** | Main site — open-source projects, blog posts on AI testing, probabilistic systems, and regulatory compliance  | GoDaddy   |
+| **javai.ch**  | Reserved for Swiss-specific content — FINMA regulations, Swiss enterprise and cantonal government AI concerns | GoDaddy   |
 
 ## Projects featured
 
