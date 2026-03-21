@@ -4,10 +4,10 @@ This repository contains the source for [javai.org](https://javai.org/), a stati
 
 ## Domains
 
-| Domain        | Purpose                                                                                                       | Registrar |
-|---------------|---------------------------------------------------------------------------------------------------------------|-----------|
-| **javai.org** | Main site — open-source projects, blog posts on AI testing, probabilistic systems, and regulatory compliance  | GoDaddy   |
-| **javai.ch**  | Reserved for Swiss-specific content — FINMA regulations, Swiss enterprise and cantonal government AI concerns | GoDaddy   |
+| Domain        | Purpose                                                                                                       | Repository |
+|---------------|---------------------------------------------------------------------------------------------------------------|------------|
+| **javai.org** | Main site — open-source projects, blog posts on AI testing, probabilistic systems, and regulatory compliance  | This repo  |
+| **javai.ch**  | Swiss-specific content — FINMA regulations, Swiss enterprise and cantonal government AI concerns              | [javai-org/javai-ch](https://github.com/javai-org/javai-ch) |
 
 ## Projects featured
 
@@ -116,7 +116,7 @@ To point the domains at GitHub Pages, configure these DNS records in GoDaddy:
 | A     | @    | 185.199.111.153          |
 | CNAME | www  | javai-org.github.io      |
 
-**javai.ch:** Currently reserved. Can be configured as a redirect to javai.org or set up as a separate Hugo site for Swiss-specific content.
+**javai.ch** is managed in a [separate repository](https://github.com/javai-org/javai-ch).
 
 After configuring DNS, enable "Enforce HTTPS" in the GitHub Pages settings for the repository.
 

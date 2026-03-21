@@ -1,10 +1,10 @@
 # Purpose
 
-This repository contains the source for [javai.org](https://javai.org/), an English Hugo static website focused on probabilistic testing solutions and related open source projects..
+This repository contains the source for [javai.org](https://javai.org/), an English Hugo static website focused on probabilistic testing solutions and related open source projects.
 
-The target audience is IT managers, Software Testing persoinnel, experienced software developers.
+The companion site [javai.ch](https://javai.ch/) (Swiss-specific regulatory content) is managed in a [separate repository](https://github.com/javai-org/javai-ch).
 
-##Languages
+The target audience is IT managers, software testing personnel, and experienced software developers.
 
 ## Content directory structure
 
@@ -13,8 +13,6 @@ content/
 ├── posts/      # RSS feed
 └── projects/   # Summaries of open source projects with a link to each project's GitHub page.
 ```
-
-Each language has its own content directory. When adding new content, it must be created in all four languages.
 
 # Technology
 
