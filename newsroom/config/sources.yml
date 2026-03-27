@@ -1,0 +1,44 @@
+sources:
+  # === Tier 1 — Core sources for probabilistic testing and stochastic software ===
+
+  - id: nist-ai
+    name: "NIST AI / Information Technology"
+    tier: 1
+    type: rss
+    url: "https://www.nist.gov/news-events/information%20technology/rss.xml"
+    tags: ["standards", "risk-management", "testing", "monitoring"]
+
+  - id: nist-software
+    name: "NIST Software Quality"
+    tier: 1
+    type: rss
+    url: "https://www.nist.gov/news-events/software%20quality/rss.xml"
+    tags: ["standards", "software-quality", "testing"]
+
+  # === Tier 2 — Testing and validation ===
+
+  - id: cen-cenelec
+    name: "CEN-CENELEC AI Standards"
+    tier: 2
+    type: html-scrape
+    url: "https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/"
+    selectors:
+      item: ".news-item, article"
+      title: "h3, h2"
+      link: "a@href"
+      date: ".date, time@datetime"
+    baseUrl: "https://www.cencenelec.eu"
+    tags: ["standards", "conformity", "eu"]
+
+  - id: oecd-ai
+    name: "OECD.AI Policy Observatory"
+    tier: 2
+    type: html-scrape
+    url: "https://oecd.ai/en/wonk"
+    selectors:
+      item: "article"
+      title: "h3, h2"
+      link: "a@href"
+      date: "time@datetime"
+    baseUrl: "https://oecd.ai"
+    tags: ["international", "policy", "horizon-scanning"]
