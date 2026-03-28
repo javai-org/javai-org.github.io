@@ -21,6 +21,11 @@ hugo_stats.json
 # Node (if Hugo modules or tooling added later)
 node_modules/
 
+# Gradle
+/build/
+/.gradle/
+
 # Environment
 .env
 .env.*
+/.claude/settings.local.json

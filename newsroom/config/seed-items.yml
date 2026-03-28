@@ -1,0 +1,28 @@
+# Historical items relevant to probabilistic testing and stochastic software.
+# These are seeded into the feed on first run or when state is reset.
+# The relevance filter is NOT applied to seeded items — they are pre-curated.
+
+items:
+  - title: "NIST AI Risk Management Framework (AI RMF 1.0)"
+    url: "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf"
+    date: "2023-01-26T00:00:00Z"
+    summary: >-
+      Framework for managing AI risks emphasising Govern, Map, Measure, and Manage
+      functions. Unusually strong on measurement and ongoing risk monitoring,
+      including thresholding, validation, and drift detection.
+    sourceId: nist-ai
+    sourceName: "NIST"
+    tags: ["standards", "risk-management", "monitoring", "measurement"]
+    relevanceReason: "Best-practice engineering framework for AI risk measurement, monitoring, drift detection, and validation"
+
+  - title: "ISO/IEC 42001:2023 — AI Management System standard published"
+    url: "https://www.iso.org/standard/81230.html"
+    date: "2023-12-18T00:00:00Z"
+    summary: >-
+      International standard for AI management systems covering risk management,
+      documentation, and continuous improvement for organisations developing or
+      using AI systems.
+    sourceId: cen-cenelec
+    sourceName: "ISO"
+    tags: ["standards", "iso-42001", "ai-management-system", "certification"]
+    relevanceReason: "Certification standard for AI management systems — directly applicable to AI software vendors"

@@ -1,0 +1,90 @@
+items:
+
+  # ── RELEVANT items ──────────────────────────────────────────
+
+  - title: "NIST releases updated AI Risk Management Framework guidance on measuring AI risks"
+    summary: >-
+      Updated guidance on the Measure function of the AI RMF, covering metrics for
+      monitoring deployed AI systems, detecting drift, and validating ongoing performance.
+    source: "NIST"
+    relevant: true
+    justification: "Engineering guidance on monitoring, drift detection, and performance validation for deployed AI"
+
+  - title: "NIST publishes guidance on validation of machine learning models in safety-critical systems"
+    summary: >-
+      NIST Special Publication on validation approaches for ML models deployed in
+      safety-critical contexts, covering statistical testing methods, coverage metrics
+      for input spaces, and ongoing performance monitoring requirements.
+    source: "NIST"
+    relevant: true
+    justification: "Directly about ML testing methodology — validation, coverage metrics, and monitoring for stochastic systems"
+
+  - title: "CEN-CENELEC JTC 21 publishes draft harmonised standard for AI quality management"
+    summary: >-
+      The joint technical committee has released a draft standard for AI quality management
+      systems aligned with AI Act conformity assessment requirements.
+    source: "CEN-CENELEC"
+    relevant: true
+    justification: "Testable standard that AI software developers will need to conform to"
+
+  - title: "ISO/IEC 42001 certification requirements for AI management systems published"
+    summary: >-
+      ISO has published the certification requirements for AI management systems,
+      covering risk management, documentation, and continuous improvement for AI providers.
+    source: "ISO"
+    relevant: true
+    justification: "Certification standard directly applicable to AI software vendors"
+
+  - title: "EBA report on machine learning model risk management in credit scoring"
+    summary: >-
+      The EBA has published a report on model risk management for machine learning
+      in credit scoring, covering validation requirements, performance monitoring,
+      explainability obligations, and ongoing governance of deployed models.
+    source: "EBA"
+    relevant: true
+    justification: "Specific ML model governance — validation, monitoring, explainability requirements applicable to AI software"
+
+  # ── NOT RELEVANT items ──────────────────────────────────────
+
+  - title: "EU Parliament committee discusses AI's impact on labour markets"
+    summary: >-
+      The European Parliament's Employment Committee held a hearing on the impact
+      of artificial intelligence on European labour markets, with experts warning
+      of significant job displacement in administrative and service sectors.
+    source: "European Commission"
+    relevant: false
+    justification: "Policy discussion about AI's societal impact — no software obligations or technical requirements"
+
+  - title: "OECD publishes report on AI adoption trends across member countries"
+    summary: >-
+      The OECD has published its annual report on AI adoption, showing that 65% of
+      large enterprises now use at least one AI application, with significant variation
+      across sectors and countries.
+    source: "OECD"
+    relevant: false
+    justification: "Statistical survey of AI adoption — no testing, validation, or engineering content"
+
+  - title: "European Commission announces EUR 1 billion AI innovation fund"
+    summary: >-
+      The European Commission has announced a EUR 1 billion fund to support AI
+      innovation across Europe, including grants for startups, research institutions,
+      and SMEs developing AI applications in healthcare, climate, and manufacturing.
+    source: "European Commission"
+    relevant: false
+    justification: "Funding announcement — no technical obligations for software developers"
+
+  - title: "New EDPB chair elected at plenary meeting"
+    summary: >-
+      The European Data Protection Board has elected a new chair at its
+      latest plenary meeting in Brussels.
+    source: "EDPB"
+    relevant: false
+    justification: "Political appointment — no technical or regulatory substance for developers"
+
+  - title: "ESMA consults on sustainable finance disclosure requirements"
+    summary: >-
+      ESMA has launched a consultation on revised sustainability disclosure
+      requirements for investment funds and asset managers.
+    source: "ESMA"
+    relevant: false
+    justification: "Sustainable finance regulation — unrelated to stochastic software"
