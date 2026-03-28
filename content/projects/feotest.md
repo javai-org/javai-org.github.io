@@ -2,7 +2,8 @@
 title: "feotest"
 description: "A Rust-native probabilistic testing framework — idiomatic, zero-copy, and built for the Rust ecosystem from the ground up."
 keywords: ["feotest", "probabilistic testing", "Rust testing framework", "stochastic testing", "non-deterministic testing", "Rust", "statistical assertions"]
-weight: 2
+weight: 4
+language: "Rust"
 ---
 
 **feotest** is a probabilistic testing framework for Rust. It brings the same statistical methodology as [punit](/projects/punit/) — repeated trials, confidence intervals, threshold-based verdicts — to the Rust ecosystem, built from the ground up as idiomatic Rust rather than a port.

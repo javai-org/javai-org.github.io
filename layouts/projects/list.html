@@ -1,14 +1,42 @@
 {{ define "main" }}
-{{ partial "section-banner.html" (dict "title" .Title "subtitle" "Open-source Java projects for probabilistic testing and resilient operations." "color" "green") }}
+{{ partial "section-banner.html" (dict "title" .Title "subtitle" "Open-source projects for probabilistic testing and resilient operations." "color" "green") }}
 <section class="content-list">
   <div class="container">
     {{ .Content }}
-    {{ range .Pages.ByWeight }}
+    {{ $pages := .Pages.ByWeight }}
+    {{/* Language → icon filename mapping */}}
+    {{ $icons := dict "R" "lang-r.svg" "Java" "lang-java.svg" "Rust" "lang-rust.svg" }}
+    {{ $labels := dict "Java" "Probabilistic testing for Java (JUnit 5)" "Rust" "Probabilistic testing for Rust" }}
+    {{/* Render ungrouped projects (no language) first */}}
+    {{ range $pages }}
+      {{ if not .Params.language }}
       <article class="project-listing">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <h2><img src="/images/lang-r.svg" alt="R" class="project-group-icon"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p>{{ .Description }}</p>
         <a href="{{ .Permalink }}" class="project-listing-link">Read more</a>
       </article>
+      {{ end }}
+    {{ end }}
+    {{/* Render grouped projects by language as collapsible sections */}}
+    {{ $grouped := $pages.GroupByParam "language" }}
+    {{ range $grouped }}
+      {{ if .Key }}
+      <details class="project-group">
+        <summary class="project-group-heading">
+          {{ $icon := index $icons .Key }}
+          {{ with $icon }}<img src="/images/{{ . }}" alt="{{ $.Key }}" class="project-group-icon">{{ end }}
+          {{ $label := index $labels .Key }}
+          <span>{{ with $label }}{{ . }}{{ else }}{{ $.Key }}{{ end }}</span>
+        </summary>
+        {{ range .Pages.ByWeight }}
+        <article class="project-listing">
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Description }}</p>
+          <a href="{{ .Permalink }}" class="project-listing-link">Read more</a>
+        </article>
+        {{ end }}
+      </details>
+      {{ end }}
     {{ end }}
   </div>
 </section>
