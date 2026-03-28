@@ -3,6 +3,7 @@ title: "outcome"
 description: "A Java framework for handling non-deterministic operations with type-safe results, structured failure classification, and policy-driven retries."
 keywords: ["outcome", "Java error handling", "type-safe results", "failure classification", "retry policy", "operational resilience", "boundary pattern"]
 weight: 3
+language: "Java"
 ---
 
 **outcome** is a Java framework that provides a formal boundary between deterministic application code and fallible, non-deterministic operations such as network calls, database queries, and external API requests.

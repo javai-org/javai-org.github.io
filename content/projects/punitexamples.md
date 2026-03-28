@@ -3,6 +3,7 @@ title: "punit examples"
 description: "A complete example application demonstrating punit — LLM shopping basket testing, payment gateway SLA verification, and all major experiment modes."
 keywords: ["punit examples", "probabilistic testing examples", "LLM testing", "SLA verification", "AI testing patterns", "CI/CD AI testing"]
 weight: 2
+language: "Java"
 ---
 
 **punit examples** is a companion repository containing a fully worked example application that demonstrates the [punit](/projects/punit/) framework across all its major capabilities.

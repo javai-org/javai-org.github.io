@@ -20,7 +20,14 @@
       "Bash(gh api:*)",
       "Bash(gh run:*)",
       "Bash(python3 -m json.tool)",
-      "Bash(gh workflow:*)"
+      "Bash(gh workflow:*)",
+      "WebFetch(domain:www.r-project.org)",
+      "WebFetch(domain:www.rust-lang.org)",
+      "WebFetch(domain:dev.java)",
+      "WebFetch(domain:foundation.rust-lang.org)",
+      "WebFetch(domain:rustfoundation.org)",
+      "WebFetch(domain:rustacean.net)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ]
   }
 }

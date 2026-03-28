@@ -510,6 +510,9 @@ pre code {
 .project-listing h2 {
   font-size: 1.75rem;
   margin-bottom: var(--space-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
 }
 .project-listing h2 a {
   color: var(--color-accent);
@@ -530,6 +533,48 @@ pre code {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* ---- Project groups ---- */
+.project-group {
+  margin-top: var(--space-xl);
+}
+
+.project-group-heading {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-light);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: var(--space-xs);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  list-style: none;
+}
+
+.project-group-heading::-webkit-details-marker {
+  display: none;
+}
+
+.project-group-heading::before {
+  content: '\25B6';
+  font-size: 0.7rem;
+  color: var(--color-text-light);
+  transition: transform 0.2s ease;
+}
+
+details.project-group[open] > .project-group-heading::before {
+  transform: rotate(90deg);
+}
+
+.project-group-icon {
+  width: 36px;
+  height: 36px;
 }
 
 /* ---- Section Banners ---- */
