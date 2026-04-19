@@ -745,3 +745,16 @@ details.project-group[open] > .project-group-heading::before {
   font-size: 0.95rem;
 }
 
+/* CC licence notice (Signals posts only) */
+.copyright-notice {
+  max-width: 720px;
+  margin-top: var(--space-md);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+.copyright-notice a {
+  color: var(--color-text-secondary);
+}
+

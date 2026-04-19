@@ -1,18 +1,35 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 {{- printf "<?xml-stylesheet type=\"text/xsl\" href=\"/rss.xsl\"?>" | safeHTML }}
+{{/*
+  Context-aware RSS feed.
+
+  - Home feed (/index.xml): aggregates Signals and News together, newest first.
+  - Section feed (/signals/index.xml, /news/index.xml, /projects/index.xml):
+    lists only that section's pages.
+
+  Any new Signal added to content/signals/ will surface in both /index.xml
+  (the site-wide feed) and /signals/index.xml (the Signals section feed)
+  without further template changes.
+*/}}
+{{- $items := .Pages.ByDate.Reverse }}
+{{- if .IsHome }}
+  {{- $items = (where .Site.RegularPages "Section" "in" (slice "signals" "news")).ByDate.Reverse }}
+{{- end }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ .Site.Title }}</title>
+    <title>{{ .Site.Title }}{{ if not .IsHome }} — {{ .Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
-    <description>{{ .Site.Params.description }}</description>
+    <description>{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}</description>
     <generator>Hugo {{ hugo.Version }}</generator>
     <language>{{ .Site.LanguageCode }}</language>{{ with .Site.Params.author }}
     <managingEditor>{{ . }}</managingEditor>{{ end }}
-    <lastBuildDate>{{ (index .Pages 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- if $items }}
+    <lastBuildDate>{{ (index $items 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}
     {{- with .OutputFormats.Get "RSS" }}
     <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />
     {{- end }}
-    {{- range (where .Site.RegularPages "Section" "in" (slice "signals" "news")).ByDate.Reverse }}
+    {{- range $items }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>

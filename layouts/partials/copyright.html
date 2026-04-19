@@ -1,0 +1,20 @@
+{{/*
+  CC BY 4.0 licence notice for Signals posts.
+
+  Renders only on pages in the `signals` section. News and Projects
+  do not carry this notice; the site-level copyright in the footer
+  covers everything else.
+
+  Pulls the author display name from .Site.Params.authors and the
+  publication year from the post's Date frontmatter.
+*/}}
+{{ if eq .Section "signals" }}
+{{ $author := index .Site.Params.authors (default "" .Params.author) }}
+{{ with $author }}
+<p class="copyright-notice">
+  &copy; {{ $.Date.Format "2006" }} {{ .name }}.
+  Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>
+  — share and adapt freely with attribution.
+</p>
+{{ end }}
+{{ end }}
