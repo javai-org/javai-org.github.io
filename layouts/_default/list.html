@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{- $color := "blue" -}}
-{{- if eq .Section "posts" }}{{ $color = "orange" }}{{ end -}}
+{{- if eq .Section "signals" }}{{ $color = "orange" }}{{ end -}}
+{{- if eq .Section "news" }}{{ $color = "blue" }}{{ end -}}
 {{ partial "section-banner.html" (dict "title" .Title "subtitle" .Description "color" $color) }}
 <section class="content-list">
   <div class="container">

@@ -1,4 +1,11 @@
-# Challenger, Deming, and the Watershed Moment of AI
+---
+title: "Challenger, Deming, and the Watershed Moment of AI"
+date: 2026-04-19
+description: "Why the real AI risk to software organisations sits with upper management — and what Deming and Challenger still have to teach them."
+author: michael
+linkedinPost: ""
+summary: "A watershed-moment essay for IT heads and upper management on why AI amplifies, rather than creates, software quality — and why the responsibility rests with those who own the system."
+---
 
 ## The productivity miracle and the junior problem
 

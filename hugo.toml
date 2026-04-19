@@ -11,7 +11,7 @@ enableRobotsTXT = true
   description = "Bringing solutions to difficult questions of testing non-deterministic systems, such as AI."
   author = "Javai"
   tagline = "Measure. Regress. Trust."
-  ogImage = "images/hero.jpg"
+  ogImage = "images/og-default.png"
   keywords = [
     "probabilistic testing",
     "AI performance measurement",
@@ -34,12 +34,34 @@ enableRobotsTXT = true
 [markup.goldmark.renderer]
   unsafe = true
 
+[params.analytics]
+  # Full URL of the site-specific Plausible script. Empty string disables
+  # analytics. The URL embeds the site ID (public; visible in page source).
+  # Different per site: javai.org and javai.ch each have their own script URL.
+  plausibleScriptUrl = "https://plausible.io/js/pa-R0QJ2aTt6MLM6ZeOCNBuT.js"
+
+# Author registry. Posts reference an author by key via the `author` frontmatter
+# field; the engagement partial and byline resolve name and LinkedIn URL from
+# here. Add further curators by appending new [params.authors.<key>] blocks.
+[params.authors.michael]
+  name = "Michael Mannion"
+  linkedin = "https://www.linkedin.com/in/mike-franz-mannion/"
+
+[params.engagement]
+  # Global on/off for the end-of-post engagement block. A per-post frontmatter
+  # `engagement: false` can suppress the block on a specific post.
+  enabled = true
+
 [menus]
   [[menus.main]]
     name = 'Projects'
     pageRef = '/projects'
     weight = 10
   [[menus.main]]
-    name = 'Posts'
-    pageRef = '/posts'
+    name = 'Signals'
+    pageRef = '/signals'
     weight = 20
+  [[menus.main]]
+    name = 'News'
+    pageRef = '/news'
+    weight = 30

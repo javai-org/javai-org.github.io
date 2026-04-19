@@ -11,7 +11,9 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="Javai">
-{{ with .Site.Params.ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+{{/* Per-post image wins; otherwise the site-wide default from Site.Params.ogImage. */}}
+{{ $ogImage := or .Params.image .Site.Params.ogImage }}
+{{ with $ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
 {{ if .IsPage }}
 <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
 {{ with .Params.lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
@@ -21,6 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ with $ogImage }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
 
 <!-- Canonical -->
 <link rel="canonical" href="{{ .Permalink }}">
@@ -30,3 +33,15 @@
 {{ end }}
 {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">
+
+{{/* Plausible analytics — production builds only; suppressed during `hugo server`. */}}
+{{ with .Site.Params.analytics.plausibleScriptUrl }}
+{{ if not hugo.IsServer }}
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="{{ . }}"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+{{ end }}
+{{ end }}

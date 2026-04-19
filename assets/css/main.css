@@ -447,6 +447,13 @@ pre code {
   margin-top: var(--space-xs);
 }
 
+.content-byline {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-xs);
+}
+
 .content-header .lead {
   font-size: 1.15rem;
   color: var(--color-text-secondary);
@@ -700,4 +707,41 @@ details.project-group[open] > .project-group-heading::before {
     flex-direction: column;
     text-align: center;
   }
+
+  .engagement-links {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
 }
+
+/* Engagement block (end-of-post on Signals and News pages) */
+.engagement {
+  max-width: 720px;
+  margin-top: var(--space-xl);
+  font-family: var(--font-ui);
+}
+
+.engagement-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.engagement-label {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.engagement-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  padding: 0;
+}
+
+.engagement-links a {
+  font-size: 0.95rem;
+}
+

@@ -1,0 +1,42 @@
+{{/*
+  End-of-post engagement block for Signals and News posts.
+
+  Resolves the author from .Site.Params.authors keyed by the post's
+  `author` frontmatter, then emits up to three links:
+
+    - Join the discussion on LinkedIn   (if .Params.linkedinPost set)
+    - Find X on LinkedIn                (if author.linkedin set)
+    - Share on LinkedIn                 (always; uses current page URL)
+
+  Disabled globally by .Site.Params.engagement.enabled = false;
+  suppressed on a specific post by frontmatter `engagement: false`.
+
+  Renders only on pages in the `signals` or `news` sections.
+*/}}
+{{ if .Site.Params.engagement.enabled }}
+{{ if ne .Params.engagement false }}
+{{ if or (eq .Section "signals") (eq .Section "news") }}
+
+{{ $author := index .Site.Params.authors (default "" .Params.author) }}
+{{ $linkedinPost := .Params.linkedinPost }}
+{{ $shareUrl := printf "https://www.linkedin.com/sharing/share-offsite/?url=%s" (.Permalink | urlquery) }}
+
+<aside class="engagement" aria-label="Engagement links">
+  <hr class="engagement-divider">
+  <p class="engagement-label"><strong>Thoughts?</strong></p>
+  <ul class="engagement-links">
+    {{ with $linkedinPost }}
+    <li><a href="{{ . }}">Join the discussion on LinkedIn</a></li>
+    {{ end }}
+    {{ with $author }}
+      {{ with .linkedin }}
+    <li><a href="{{ . }}">Find {{ $author.name }} on LinkedIn</a></li>
+      {{ end }}
+    {{ end }}
+    <li><a href="{{ $shareUrl }}">Share on LinkedIn</a></li>
+  </ul>
+</aside>
+
+{{ end }}
+{{ end }}
+{{ end }}

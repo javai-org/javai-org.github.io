@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{- $color := "blue" -}}
-{{- if eq .Section "posts" }}{{ $color = "orange" }}{{ end -}}
+{{- if eq .Section "signals" }}{{ $color = "orange" }}{{ end -}}
+{{- if eq .Section "news" }}{{ $color = "blue" }}{{ end -}}
 {{- if eq .Section "projects" }}{{ $color = "green" }}{{ end -}}
 {{- if eq .Title "Subscribe" }}{{ $color = "purple" }}{{ end -}}
 {{ partial "section-banner.html" (dict "title" .Title "subtitle" .Description "color" $color) }}
@@ -8,11 +9,15 @@
   <div class="container">
     <header class="content-header">
       {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 January 2006" }}</time>{{ end }}
+      {{ with index .Site.Params.authors (default "" .Params.author) }}
+      <p class="content-byline">By {{ .name }}</p>
+      {{ end }}
       {{ with .Params.summary }}<p class="lead">{{ . }}</p>{{ end }}
     </header>
     <div class="content-body">
       {{ .Content }}
     </div>
+    {{ partial "engagement.html" . }}
   </div>
 </article>
 {{ end }}
