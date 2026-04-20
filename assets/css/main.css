@@ -472,6 +472,57 @@ pre code {
   margin: var(--space-md) 0;
 }
 
+/* Side-by-side title composite (e.g., Deming + AI) at the top of a post */
+.title-composite {
+  margin: var(--space-md) 0;
+}
+
+.title-composite-images {
+  display: flex;
+  align-items: stretch;
+}
+
+.title-composite-images img {
+  flex: 1 1 0;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.title-composite-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-top: var(--space-xs);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.title-composite-credit {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-top: var(--space-xs);
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .title-composite-images {
+    flex-direction: column;
+  }
+
+  .title-composite-images img {
+    max-width: 100%;
+  }
+
+  .title-composite-caption {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+}
+
 /* ---- List pages ---- */
 .content-list {
   padding: var(--space-xxl) 0;

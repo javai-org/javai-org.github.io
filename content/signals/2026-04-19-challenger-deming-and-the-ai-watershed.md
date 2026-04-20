@@ -1,11 +1,25 @@
 ---
-title: "Challenger, Deming, and the Watershed Moment of AI"
+title: "Deming, Challenger, and the Watershed Moment of AI"
 date: 2026-04-19
 description: "Why the real AI risk to software organisations sits with upper management - and what Deming and Challenger still have to teach them."
 author: michael
 linkedinPost: ""
-summary: "A watershed-moment essay for IT heads and upper management on why AI amplifies, rather than creates, software quality - and why the responsibility rests with those who own the system."
+summary: "A watershed-moment essay on why AI amplifies, rather than creates, software quality - and why the responsibility rests with those who own the system."
 ---
+
+<figure class="title-composite">
+  <div class="title-composite-images">
+    <img src="/images/deming.png" alt="W. Edwards Deming, photographed at the U.S. Census Bureau">
+    <img src="/images/deming-ai-title-image.png" alt="An AI-era composition, juxtaposed with Deming's portrait">
+  </div>
+  <figcaption class="title-composite-caption">
+    <span>20th Centrury Quality Guru William E. Deming</span>
+    <span>AI-generated stuff</span>
+  </figcaption>
+  <p class="title-composite-credit">
+    Deming photograph: <a href="https://www.census.gov/library/photos/1939/w-edwards-deming.html">U.S. Census Bureau</a> (public domain).
+  </p>
+</figure>
 
 ## The productivity miracle and the junior problem
 
