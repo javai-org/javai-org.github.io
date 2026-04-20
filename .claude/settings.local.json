@@ -27,7 +27,14 @@
       "WebFetch(domain:foundation.rust-lang.org)",
       "WebFetch(domain:rustfoundation.org)",
       "WebFetch(domain:rustacean.net)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/mikemannion/workspace/javai-orchestrator/javai/plan/img.png)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)",
+      "Bash(git mv *)"
     ]
   }
 }
