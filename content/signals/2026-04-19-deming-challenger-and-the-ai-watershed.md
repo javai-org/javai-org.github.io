@@ -5,8 +5,6 @@ description: "Why the real AI risk to software organisations sits with upper man
 author: michael
 linkedinPost: ""
 summary: "A watershed-moment essay on why AI amplifies, rather than creates, software quality - and why the responsibility rests with those who own the system."
-aliases:
-  - /signals/2026-04-19-challenger-deming-and-the-ai-watershed/
 ---
 
 <figure class="title-composite">
