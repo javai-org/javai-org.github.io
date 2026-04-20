@@ -3,7 +3,7 @@ title: "Deming, Challenger, and the Watershed Moment of AI"
 date: 2026-04-19
 description: "Why the real AI risk to software organisations sits with upper management - and what Deming and Challenger still have to teach them."
 author: michael
-linkedinPost: ""
+linkedinPost: "https://www.linkedin.com/pulse/deming-challenger-watershed-moment-ai-mike-mannion-0qtbe"
 summary: "A watershed-moment essay on why AI amplifies, rather than creates, software quality - and why the responsibility rests with those who own the system."
 ---
 
@@ -76,11 +76,11 @@ If we take Deming seriously (and we absolutely should), the intervention is not 
 
 This is uncomfortable, because upper management in most software organisations is itself a system output. The same forces that produced senior engineers without that expertise produced VPs of Engineering and CTOs without it, often by promoting those same seniors. Still others reach those same seats via a wholly non-technical route - careers, often outstanding, built on organisational goals, delivery timelines, and people management. *They are accountable for systems they have no vocabulary to inspect*. Telling that layer "you need to understand what quality is" is easy to say, but they are the hardest audience to reach. *Their authority currently rests on appearing to know enough already*. Asking them to admit otherwise is asking them to give up the very thing that put them in the seat.
 
-But before an organisation can capture the productivity AI genuinely promises, rather than simply industrialise its existing weaknesses, it has to prepare itself, and the preparation has to be aimed at upper management. Upper management does not need to learn to code. It needs to develop a specific, narrow, *diagnostic* literacy: enough understanding of what good code actually is to distinguish quality from its imitation, and enough confidence to defend quality investments whose payoff comes years later. That last one is the hardest filter. Most executives can, in principle, learn what a code smell is. Very few can, in practice, tell a board "we are slowing down this quarter to fix foundations." And yet that is, in every meaningful sense, the entire job. A classic from the man himself:
+But before an organisation can capture the productivity AI genuinely promises, rather than simply industrialise its existing weaknesses, it has to prepare itself, and the preparation has to be aimed at upper management. Upper management does not need to learn to code. It needs to develop a specific, narrow, *diagnostic* literacy: enough understanding of what good code actually is to distinguish quality from its imitation, and enough confidence to defend quality investments whose payoff comes years later. That last one is the hardest filter. Most executives can, in principle, learn what a code smell is. Very few can, in practice, tell a board "we are slowing down this quarter to fix foundations." And yet that is, in every meaningful sense, the entire job. A classic from the man:
 
 > *"Support of top management is not sufficient. It is not enough that top management commit themselves for life to quality and productivity. They must know what it is that they are committed to – that is, what they must do. These obligations cannot be delegated. Support is not enough: action is required."*
 >
-> - [Deming](https://deming.org/institute-leadership/)
+> - [William E. Deming](https://deming.org/institute-leadership/)
 
 ## Confounding forces
 
