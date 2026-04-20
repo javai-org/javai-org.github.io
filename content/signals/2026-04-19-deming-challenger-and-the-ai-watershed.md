@@ -10,7 +10,7 @@ summary: "A watershed-moment essay on why AI amplifies, rather than creates, sof
 <figure class="title-composite">
   <img src="/images/deming-ai-composite.png" alt="W. Edwards Deming alongside an AI-generated composition of binary code">
   <figcaption class="title-composite-caption">
-    <span>20th Centrury Quality Guru William E. Deming</span>
+    <span>20th Century Quality Luminary William E. Deming</span>
     <span>AI-generated stuff</span>
   </figcaption>
   <p class="title-composite-credit">
