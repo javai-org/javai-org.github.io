@@ -39,7 +39,8 @@
       "Bash(sips -g pixelWidth -g pixelHeight -g format /Users/mikemannion/workspace/javai-orchestrator/javai/static/images/deming.png)",
       "Bash(sips -g pixelWidth -g pixelHeight /Users/mikemannion/workspace/javai-orchestrator/javai/static/images/deming-ai-title-image.png)",
       "Bash(python3 -c \"from PIL import Image; print\\('PIL ok'\\)\")",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "Bash(kill 89164)"
     ]
   }
 }

@@ -5,13 +5,12 @@ description: "Why the real AI risk to software organisations sits with upper man
 author: michael
 linkedinPost: ""
 summary: "A watershed-moment essay on why AI amplifies, rather than creates, software quality - and why the responsibility rests with those who own the system."
+aliases:
+  - /signals/2026-04-19-challenger-deming-and-the-ai-watershed/
 ---
 
 <figure class="title-composite">
-  <div class="title-composite-images">
-    <img src="/images/deming.png" alt="W. Edwards Deming, photographed at the U.S. Census Bureau">
-    <img src="/images/deming-ai-title-image.png" alt="An AI-era composition, juxtaposed with Deming's portrait">
-  </div>
+  <img src="/images/deming-ai-composite.png" alt="W. Edwards Deming alongside an AI-generated composition of binary code">
   <figcaption class="title-composite-caption">
     <span>20th Centrury Quality Guru William E. Deming</span>
     <span>AI-generated stuff</span>

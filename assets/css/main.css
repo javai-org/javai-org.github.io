@@ -472,19 +472,13 @@ pre code {
   margin: var(--space-md) 0;
 }
 
-/* Side-by-side title composite (e.g., Deming + AI) at the top of a post */
+/* Title composite (e.g., Deming + AI) at the top of a post */
 .title-composite {
   margin: var(--space-md) 0;
 }
 
-.title-composite-images {
-  display: flex;
-  align-items: stretch;
-}
-
-.title-composite-images img {
-  flex: 1 1 0;
-  max-width: 50%;
+.title-composite img {
+  width: 100%;
   height: auto;
   display: block;
   margin: 0;
@@ -509,14 +503,6 @@ pre code {
 }
 
 @media (max-width: 640px) {
-  .title-composite-images {
-    flex-direction: column;
-  }
-
-  .title-composite-images img {
-    max-width: 100%;
-  }
-
   .title-composite-caption {
     flex-direction: column;
     gap: var(--space-xs);
