@@ -39,7 +39,7 @@ It is worth pausing on why that reflex comes so readily. Software has lived with
 
 I'll go one step further: pretending a non-deterministic system is deterministic is kind of the opposite of engineering - a discipline founded on the idea of creating machines that operate predictably even in the face of uncertainty. This is a disservice to the profession and its an insult to the product's users. 
 
-We can and we must do better.
+We can do better. We must.
 
 ## What car manufacturers knew
 
@@ -70,17 +70,17 @@ The deepest thing the manufacturing tradition offers software is not a technique
 - *Is the process producing those outputs in statistical control, or has it drifted?*
 - *When an input sits near the boundary of acceptable behaviour, how much of the output distribution falls outside it, and at what cost?*
 
-Each of these has a century of theory and practice behind it. None of them collapse to green or red. All of them require a test to do something a unit test was never designed to do: run the system many times, model the distribution of outputs, and render a statistically informed judgement about whether the *process* - model plus prompt plus retrieval plus guardrails - is fit for the purpose.
+Each of these has a century of theory and practice behind it. None of them collapse to green or red. All of them require a test to do something a unit test was never designed to do: run the system many times, model the distribution of outputs, and render a statistically informed verdict about whether the *process* - model plus prompt plus retrieval plus guardrails - is fit for the purpose.
 
 This is not a rejection of unit testing. Deterministic code remains deterministic, and a unit test remains the right instrument for it. What is being proposed is an additional instrument, on an additional axis, for a class of component whose non-determinism is written on the tin.
 
 ## The discipline software has not yet built
 
-Everything needed for this turn is already in the intellectual commons. Statistical process control is a hundred years old. Acceptance sampling is older than TCP/IP. The mathematics of estimating a proportion from Bernoulli trials, a tolerance interval, or a drift statistic is undergraduate material. The methods are not missing. What is missing is the *engineering mindset and practice* that puts them in the developer's hands the way JUnit put assertions there twenty-five years ago.
+Everything needed for this turn is already in the intellectual commons. Statistical process control is a hundred years old. Acceptance sampling is older than TCP/IP. The mathematics of estimating a proportion from Bernoulli trials, a tolerance interval, or a drift statistic is undergraduate material. The methods are not missing. What is missing is the *engineering mindset and practice* that puts them in the developer's hands the way JUnit put assertions in the minds of Java developers twenty-five years ago.
 
 That practice, if it is to look like the unit-testing revolution did, has to include several things at once. A vocabulary that distinguishes deterministic assertions from probabilistic ones. Frameworks that run a system *n* times, summarise the output distribution, and report pass or fail against a stated confidence level - not against a single observation. CI infrastructure that treats the variance of a probabilistic test as a legitimate signal rather than a nuisance to be muted. And, perhaps hardest, a cultural acceptance that "this component satisfies its specification 96.2% of the time, with a 95% confidence interval of ±0.8%" is a *more honest* engineering statement than "the test is green", not a weaker one.
 
-The honesty will soon stop being optional. LLM-backed systems are already being shipped under regulatory regimes - the EU AI Act the most conspicuous [TODO citation: EU AI Act, esp. Article 15 on accuracy, robustness and cybersecurity for high-risk systems] - that presume their operators can say something quantitative about reliability. A team that can only report "the tests pass" is not merely under-tooled; in more and more contexts, it is non-compliant. The regulatory vocabulary is converging on statistical claims faster than the engineering practice is producing them.
+The honesty will soon stop being optional. LLM-backed systems are already being shipped under regulatory regimes - the EU AI Act the most conspicuous [TODO citation: EU AI Act, esp. Article 15 on accuracy, robustness and cybersecurity for high-risk systems; for the full regulatory map, phased inception dates, and enforcement timeline, see the companion site [javai.ch](https://javai.ch), which tracks these in depth alongside the Swiss-specific regime] - that presume their operators can say something quantitative about reliability. A team that can only report "the tests pass" is not merely under-tooled; in more and more contexts, it is non-compliant. The regulatory vocabulary is converging on statistical claims faster than the engineering practice is producing them.
 
 ## The humility required
 
@@ -88,7 +88,7 @@ The uncomfortable part of this turn is that it asks software - a discipline that
 
 The reversal at the top of this piece is therefore not a neat rhetorical flourish. It is the technology transfer the next decade actually requires. Car manufacturers had to learn software to survive the move to software-defined vehicles. Software is now going to have to learn manufacturing statistics to survive the move to probabilistic components. The direction of humility has flipped, and the sooner the profession notices, the less painfully it will adjust.
 
-If the 20th century's great quality insight was Deming's - *that quality is a system output, owned by management* - the 21st century's, for software, may be the one Shewhart implied and Taguchi made explicit: *that correctness, for the systems we are now building, is a statistical claim, or it is nothing at all*.
+If the 20th century's great quality insight was Deming's - *that quality is a system output, owned by management* - the 21st century's, for software, may be the one Shewhart implied and Taguchi made explicit: *that correctness, for the systems we are now building, is a statistical claim, or it is nothing at all*. [TODO citation: Shewhart's implicit statement runs through *Economic Control of Quality of Manufactured Product* (1931) and is sharpest in *Statistical Method from the Viewpoint of Quality Control* (1939) — a process is meaningfully "correct" only when its output distribution is characterised and in control. Taguchi made the claim explicit via the loss function, which quantifies deviation from target as continuous loss rather than a pass/fail step — see Taguchi & Wu, *Off-Line Quality Control* (1979) and Taguchi, *Introduction to Quality Engineering* (1986).]
 
 Nobody is coming to invent this discipline for software. The mathematics is already written. The industrial case studies are already in the textbooks. The regulators are already asking the questions. What remains is for the profession to do what every mature engineering discipline before it has done: accept that the output of a real process is a distribution, and learn - from the people who have been doing it all along - how to reason about one.
 
@@ -112,3 +112,4 @@ The essay above argues for a discipline; the discipline requires tools. javai.or
 | [TODO: Taguchi loss function; Taguchi & Wu]                                                           | The economic reframing of tolerance as continuous loss rather than step-function pass/fail.                                               |
 | [TODO: ISO 2859-1 / MIL-STD-105]                                                                      | Formal acceptance sampling: deciding a population's quality from a sample, at stated confidence.                                          |
 | [TODO: EU AI Act, Article 15]                                                                         | Regulatory requirement for quantitative accuracy and robustness claims for high-risk AI systems.                                          |
+| [javai.ch](https://javai.ch)                                                                          | Companion site tracking AI-regulation sources, phased inception dates, and enforcement timelines — in particular the EU AI Act and the Swiss-specific regime. Canonical pointer for readers who want the current regulatory map. |

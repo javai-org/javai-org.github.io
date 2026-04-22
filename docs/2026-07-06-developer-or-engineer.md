@@ -8,7 +8,7 @@ summary: "Follow-up to the Shewhart / Toyota piece. Challenges the reader to dis
 draft: true
 ---
 
-<!-- STATUS: outline only. Captured as a note so the idea isn't lost. Intended as the follow-up to 2026-04-28-shewhart-toyota-and-the-probabilistic-turn.md. -->
+<!-- STATUS: outline only. Captured as a note so the idea isn't lost. Intended as the follow-up to 2026-05-04-shewhart-toyota-and-the-probabilistic-turn.md. -->
 
 ## Outline
 
@@ -20,6 +20,10 @@ Challenge the reader to distinguish "software developer" from "software engineer
 ## Closer
 
 Are you a software developer or a software engineer? Think about that the next time you apply for a job.
+
+One line to pin to the wall above your desk:
+
+> **Don't ship application behaviour that you haven't quantified.**
 
 ## Notes to self
 
