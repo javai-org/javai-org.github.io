@@ -751,6 +751,31 @@ details.project-group[open] > .project-group-heading::before {
   }
 }
 
+/* Phone-only concessions. The 768px block above is shared with small
+   tablets; this block is reserved strictly for phone-specific tightening
+   of vertical space. Structural rules that should apply to both phones
+   and small tablets belong in the 768px block, not here. */
+@media (max-width: 480px) {
+  .hero { min-height: 280px; }
+  .hero .container {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+  .hero h1 { font-size: 1.875rem; }
+  .hero-sub { font-size: 0.95rem; margin-bottom: var(--space-md); }
+
+  .section-banner {
+    height: auto;
+    min-height: 120px;
+  }
+  .section-banner .container {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+  .section-banner h1 { font-size: 1.5rem; }
+  .section-banner-sub { font-size: 0.95rem; }
+}
+
 /* Engagement block (end-of-post on Signals and News pages) */
 .engagement {
   max-width: 720px;
