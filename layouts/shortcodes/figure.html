@@ -1,0 +1,13 @@
+{{- $img := resources.Get (.Get "src") -}}
+{{ if $img }}
+{{- $imgLg := $img.Resize "1140x webp q80" -}}
+{{- $imgSm := $img.Resize "720x webp q75" -}}
+<figure class="content-figure">
+  <picture>
+    <source media="(max-width: 768px)" srcset="{{ $imgSm.RelPermalink }}">
+    <source srcset="{{ $imgLg.RelPermalink }}">
+    <img src="{{ $imgLg.RelPermalink }}" alt="{{ .Get "alt" | default "" }}" loading="lazy">
+  </picture>
+  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{ end }}

@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{ partial "section-banner.html" (dict "title" .Title "subtitle" .Description "color" "slate") }}
+<section class="contact-page">
+  <div class="container">
+    <div class="contact-body">
+      {{ .Content }}
+      <form
+        action="https://formspree.io/f/xaqlwlqn"
+        method="POST"
+        class="contact-form"
+      >
+        <input type="hidden" name="_site" value="javai.org">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="_subject" required>
+            <option value="" disabled selected>Please select…</option>
+            <option value="General question">General question</option>
+            <option value="Project feedback">Project feedback</option>
+            <option value="Consulting / advisory">Consulting / advisory</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+{{ end }}
