@@ -733,6 +733,11 @@ details.project-group[open] > .project-group-heading::before {
   background: #7b3fa0;
 }
 
+/* Slate (about/contact) */
+.section-banner--slate::after {
+  background: #4a5568;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
@@ -849,3 +854,116 @@ details.project-group[open] > .project-group-heading::before {
   color: var(--color-text-secondary);
 }
 
+/* ---- About page figure (floated profile photo) ---- */
+.content-figure {
+  float: left;
+  margin: 0.15em var(--space-lg) var(--space-sm) 0;
+  width: 200px;
+}
+
+.content-figure picture,
+.content-figure picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.content-figure figcaption {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-top: var(--space-xs);
+}
+
+.content-body h2 { clear: both; }
+
+@media (max-width: 640px) {
+  .content-figure {
+    float: none;
+    width: 60%;
+    margin: var(--space-sm) auto var(--space-md);
+  }
+}
+
+/* ---- Contact form ---- */
+.contact-page {
+  padding: var(--space-xxl) 0;
+}
+
+.contact-body {
+  max-width: 640px;
+}
+
+.contact-body > p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.contact-body ul {
+  margin-bottom: var(--space-lg);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.form-group label {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.75em 1em;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: border-color 0.2s ease;
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a4a4a' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1em center;
+  padding-right: 2.5em;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(0, 158, 214, 0.12);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+}

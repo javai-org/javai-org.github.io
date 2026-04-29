@@ -4,6 +4,8 @@
 {{- if eq .Section "news" }}{{ $color = "blue" }}{{ end -}}
 {{- if eq .Section "projects" }}{{ $color = "green" }}{{ end -}}
 {{- if eq .Title "Subscribe" }}{{ $color = "purple" }}{{ end -}}
+{{- if eq .Title "About" }}{{ $color = "slate" }}{{ end -}}
+{{- if eq .Title "Contact" }}{{ $color = "slate" }}{{ end -}}
 {{ partial "section-banner.html" (dict "title" .Title "subtitle" .Description "color" $color) }}
 <article class="content-single">
   <div class="container">

@@ -65,3 +65,11 @@ enableRobotsTXT = true
     name = 'News'
     pageRef = '/news'
     weight = 30
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 40
+  [[menus.main]]
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 50
