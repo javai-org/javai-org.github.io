@@ -40,7 +40,19 @@
       "Bash(sips -g pixelWidth -g pixelHeight /Users/mikemannion/workspace/javai-orchestrator/javai/static/images/deming-ai-title-image.png)",
       "Bash(python3 -c \"from PIL import Image; print\\('PIL ok'\\)\")",
       "Bash(python3 *)",
-      "Bash(kill 89164)"
+      "Bash(kill 89164)",
+      "Read(//tmp/**)",
+      "Bash(mkdir -p /tmp/chrome-audit)",
+      "Bash(/Applications/Google Chrome.app/Contents/MacOS/Google Chrome *)",
+      "Bash(tee baseline.json)",
+      "Bash(pkill -f \"chrome-audit\")",
+      "Bash(python3 measure.py)",
+      "Bash(echo \"--- EXIT $? ---\")",
+      "Bash(kill %bhzmr9fvo)",
+      "Bash(pkill -f \"hugo server.*1314\")",
+      "Bash(grep -v \".sample$\")",
+      "Bash(gh pr *)",
+      "Bash(grep -nE \"£|million|billion|\\\\\\\\$\" /Users/mikemannion/workspace/javai-orchestrator/javai/docs/2026-08-06-ai-first-ai-ready.md)"
     ]
   }
 }

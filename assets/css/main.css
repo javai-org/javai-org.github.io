@@ -509,6 +509,35 @@ pre code {
   }
 }
 
+/* Inline diagram (body-figure with caption) */
+.inline-diagram {
+  margin: var(--space-lg) auto;
+  text-align: center;
+}
+
+.inline-diagram img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.inline-diagram figcaption {
+  margin-top: var(--space-xs);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+.inline-diagram-credit {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-top: var(--space-xs);
+  margin-bottom: 0;
+}
+
 /* ---- List pages ---- */
 .content-list {
   padding: var(--space-xxl) 0;

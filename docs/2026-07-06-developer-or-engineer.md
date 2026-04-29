@@ -8,7 +8,7 @@ summary: "Follow-up to the Shewhart / Toyota piece. Challenges the reader to dis
 draft: true
 ---
 
-<!-- STATUS: outline only. Captured as a note so the idea isn't lost. Intended as the follow-up to 2026-05-04-shewhart-toyota-and-the-probabilistic-turn.md. -->
+<!-- STATUS: outline only. Captured as a note so the idea isn't lost. Intended as the follow-up to 2026-06-01-shewhart-toyota-and-the-probabilistic-turn.md. -->
 
 ## Outline
 
