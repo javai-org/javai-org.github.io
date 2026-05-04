@@ -3,6 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    # Daily rebuild at 05:00 UTC so future-dated posts publish on schedule
+    # without a manual push. Hugo defaults to `buildFuture: false`, so a
+    # post dated 2026-05-06 is excluded from any build that runs before
+    # then; this cron makes sure the build runs on the day the date arrives.
+    - cron: '0 5 * * *'
   workflow_dispatch:
 
 permissions:
