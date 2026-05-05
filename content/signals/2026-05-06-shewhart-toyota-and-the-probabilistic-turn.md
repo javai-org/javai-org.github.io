@@ -64,7 +64,7 @@ The statistical apparatus required to answer those questions is not exotic, and 
 
 None of this was invented for cars specifically. All of it is what cars run on today. A modern automotive supply chain is a cathedral of statistical process control, and it has to be, because the alternative - inspecting every part against an ideal - is both uneconomic and naive about what can actually be known.
 
-> *"The long-range contribution of statistics depends not so much upon getting a lot of highly trained statisticians into industry as it does in creating a statistically minded generation of physicists, chemists, engineers and others who will in any way have a hand in developing and directing the production processes of tomorrow."*
+> *"The long-range contribution of statistics depends not so much upon getting … statisticians into industry as it does in creating a statistically minded generation of physicists, chemists, engineers and others … directing the production processes of tomorrow."*
 >
 > - Walter A. Shewhart, [*Statistical Method from the Viewpoint of Quality Control*](https://archive.org/details/CAT10502416) (1939)
 
