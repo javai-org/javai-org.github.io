@@ -1,5 +1,5 @@
 baseURL = 'https://javai.org/'
-languageCode = 'en'
+locale = 'en'
 title = 'Javai — Testing Non-Deterministic Systems'
 enableRobotsTXT = true
 
