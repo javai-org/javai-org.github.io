@@ -3,7 +3,7 @@ title: "Shewhart, Toyota, and the Probabilistic Turn"
 date: 2026-05-06
 description: "Why probabilistic software demands the statistical discipline that car manufacturers absorbed a century ago - and what we still have to learn from them."
 author: michael
-linkedinPost: ""
+linkedinPost: "https://www.linkedin.com/pulse/shewhart-toyota-probabilistic-tur-mike-mannion-wq2re"
 summary: "LLMs break software's binary view of correctness. The discipline that replaces it already exists - it was built at Bell Labs, refined in Nagoya, and has been waiting for software to need it."
 ---
 
