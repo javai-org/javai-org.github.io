@@ -54,7 +54,9 @@
       "Bash(gh pr *)",
       "Bash(grep -nE \"£|million|billion|\\\\\\\\$\" /Users/mikemannion/workspace/javai-orchestrator/javai/docs/2026-08-06-ai-first-ai-ready.md)",
       "Bash(pip3 install *)",
-      "WebFetch(domain:www.iso.org)"
+      "WebFetch(domain:www.iso.org)",
+      "Bash(git pull *)",
+      "Bash(echo \"---exit $?---\")"
     ]
   }
 }
