@@ -4,6 +4,8 @@
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="keywords" content="{{ with .Params.keywords }}{{ delimit . ", " }}{{ else }}{{ delimit .Site.Params.keywords ", " }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.author }}">
+{{ with .Site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
+{{ with .Site.Params.bingSiteVerification }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
 
 <!-- Open Graph -->
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
@@ -31,6 +33,65 @@
 {{ with .OutputFormats.Get "RSS" }}
   <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">
 {{ end }}
+{{/* ---- Structured data (JSON-LD) ---------------------------------------- */}}
+{{/* Organization + WebSite emitted on every page; SoftwareApplication on
+     project pages; Article on dated posts (signals, news). Search engines use
+     these to understand that "punit" is a software framework, not the Python
+     library or a misspelling. */}}
+{{ $org := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" "Javai"
+  "url" .Site.BaseURL
+  "logo" ($ogImage | absURL)
+  "description" .Site.Params.description
+}}
+{{ with .Site.Params.sameAs }}{{ $org = merge $org (dict "sameAs" .) }}{{ end }}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+{{ if .IsHome }}
+{{ $website := dict
+  "@context" "https://schema.org"
+  "@type" "WebSite"
+  "name" .Site.Title
+  "url" .Site.BaseURL
+  "description" .Site.Params.description
+}}
+<script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
+{{ end }}
+{{ if eq .Section "projects" }}{{ if .IsPage }}
+{{ $app := dict
+  "@context" "https://schema.org"
+  "@type" "SoftwareApplication"
+  "name" .Title
+  "url" .Permalink
+  "applicationCategory" "DeveloperApplication"
+  "operatingSystem" "Cross-platform"
+  "description" (or .Description .Site.Params.description)
+  "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "USD")
+  "isAccessibleForFree" true
+  "author" (dict "@type" "Organization" "name" "Javai" "url" .Site.BaseURL)
+}}
+{{ with .Params.language }}{{ $app = merge $app (dict "programmingLanguage" .) }}{{ end }}
+<script type="application/ld+json">{{ $app | jsonify | safeJS }}</script>
+{{ end }}{{ end }}
+{{ if and .IsPage .Date (or (eq .Section "signals") (eq .Section "news")) }}
+{{ $author := index .Site.Params.authors (default "" .Params.author) }}
+{{ $article := dict
+  "@context" "https://schema.org"
+  "@type" "Article"
+  "headline" .Title
+  "description" (or .Description .Params.summary)
+  "datePublished" (.Date.Format "2006-01-02")
+  "url" .Permalink
+  "mainEntityOfPage" .Permalink
+  "publisher" (dict "@type" "Organization" "name" "Javai" "url" .Site.BaseURL "logo" (dict "@type" "ImageObject" "url" ($ogImage | absURL)))
+}}
+{{ with .Params.lastmod }}{{ $article = merge $article (dict "dateModified" (.Format "2006-01-02")) }}{{ end }}
+{{ with $author }}{{ $article = merge $article (dict "author" (dict "@type" "Person" "name" .name "url" .linkedin)) }}{{ end }}
+{{ with $ogImage }}{{ $article = merge $article (dict "image" (. | absURL)) }}{{ end }}
+<script type="application/ld+json">{{ $article | jsonify | safeJS }}</script>
+{{ end }}
+
 {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">
 
