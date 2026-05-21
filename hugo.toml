@@ -12,6 +12,17 @@ enableRobotsTXT = true
   author = "Javai"
   tagline = "Measure. Regress. Trust."
   ogImage = "images/og-default.png"
+  # Search engine ownership verification. Paste the token from Google Search
+  # Console (Settings → Ownership verification → HTML tag) and Bing Webmaster
+  # Tools — the content value only, not the full meta tag. Empty = no tag.
+  googleSiteVerification = ""
+  bingSiteVerification = ""
+  # Profiles linked from the Organization JSON-LD `sameAs`. Helps search engines
+  # tie the site to known entities and disambiguate the "punit" name.
+  sameAs = [
+    "https://github.com/javai-org",
+    "https://www.linkedin.com/in/mike-franz-mannion/",
+  ]
   keywords = [
     "probabilistic testing",
     "AI performance measurement",
@@ -53,6 +64,10 @@ enableRobotsTXT = true
   enabled = true
 
 [menus]
+  [[menus.main]]
+    name = 'Probabilistic Testing'
+    pageRef = '/probabilistic-testing'
+    weight = 5
   [[menus.main]]
     name = 'Projects'
     pageRef = '/projects'
