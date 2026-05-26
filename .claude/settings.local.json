@@ -56,7 +56,19 @@
       "Bash(pip3 install *)",
       "WebFetch(domain:www.iso.org)",
       "Bash(git pull *)",
-      "Bash(echo \"---exit $?---\")"
+      "Bash(echo \"---exit $?---\")",
+      "Read(//Users/mikemannion/workspace/javai-orchestrator/javai-R/docs/**)",
+      "Read(//Users/mikemannion/workspace/javai-orchestrator/inventory/**)",
+      "Bash(pandoc *)",
+      "Bash(fc-list)",
+      "Bash(echo \"===BUILD EXIT $?===\")",
+      "Bash(echo \"EXIT $?\")",
+      "Bash(cd /Users/mikemannion/workspace/javai-ch)",
+      "Bash(ls docs/)",
+      "Bash(ls layouts/partials/)",
+      "Bash(ls layouts/partials/head.html)",
+      "Bash(ls hugo.* config*)",
+      "Read(//Users/mikemannion/workspace/**)"
     ]
   }
 }
