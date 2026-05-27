@@ -10,4 +10,4 @@ language: "Rust"
 
 ## Coming soon
 
-feotest examples is in active development alongside feotest. The repository will be available at [github.com/javai-org/feotest-examples](https://github.com/javai-org/feotest-examples) once published.
+feotest examples is in active development alongside feotest. The repository will be available at [github.com/mavai-org/feotest-examples](https://github.com/mavai-org/feotest-examples) once published.
