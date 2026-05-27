@@ -10,7 +10,7 @@ language: "Rust"
 
 ## Coming soon
 
-feotest is in active development and its public release is imminent. The repository will be available at [github.com/javai-org/feotest](https://github.com/javai-org/feotest) once published.
+feotest is in active development and its public release is imminent. The repository will be available at [github.com/mavai-org/feotest](https://github.com/mavai-org/feotest) once published.
 
 ## Why Rust
 
