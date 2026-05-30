@@ -3,7 +3,7 @@ plugins {
     application
 }
 
-group = "org.javai"
+group = "org.mavai"
 version = "0.1.0-SNAPSHOT"
 
 java {

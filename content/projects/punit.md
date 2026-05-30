@@ -32,6 +32,6 @@ You control two of three variables â€” sample size, confidence, and threshold â€
 
 ## Get started
 
-Visit the [punit repository on GitHub](https://github.com/javai-org/punit) for installation instructions and full documentation.
+Visit the [punit repository on GitHub](https://github.com/mavai-org/punit) for installation instructions and full documentation.
 
 See [punit examples](/projects/punitexamples/) for a complete worked application demonstrating all major features.

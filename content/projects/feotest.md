@@ -18,4 +18,4 @@ Rust's ownership model, zero-cost abstractions, and strong type system make it a
 
 ## Relationship to punit
 
-feotest implements the same statistical methodology as punit, verified against the same [javai-R](/projects/javai-r/) reference datasets. The two frameworks share a specification — what to compute — but not an implementation. Where punit uses JUnit 5 extensions and Java annotations, feotest uses Rust macros, traits, and the language's native test harness.
+feotest implements the same statistical methodology as punit, verified against the same [mavai-R](/projects/mavai-r/) reference datasets. The two frameworks share a specification — what to compute — but not an implementation. Where punit uses JUnit 5 extensions and Java annotations, feotest uses Rust macros, traits, and the language's native test harness.

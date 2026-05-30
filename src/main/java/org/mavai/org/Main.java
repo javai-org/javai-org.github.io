@@ -1,4 +1,4 @@
-package org.javai.org;
+package org.mavai.org;
 
 import org.javai.newsroom.Newsroom;
 import org.javai.newsroom.NewsroomConfig;

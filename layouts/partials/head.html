@@ -12,7 +12,7 @@
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:site_name" content="Javai">
+<meta property="og:site_name" content="Mavai">
 {{/* Per-post image wins; otherwise the site-wide default from Site.Params.ogImage. */}}
 {{ $ogImage := or .Params.image .Site.Params.ogImage }}
 {{ with $ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
@@ -41,7 +41,7 @@
 {{ $org := dict
   "@context" "https://schema.org"
   "@type" "Organization"
-  "name" "Javai"
+  "name" "Mavai"
   "url" .Site.BaseURL
   "logo" ($ogImage | absURL)
   "description" .Site.Params.description
@@ -69,7 +69,7 @@
   "description" (or .Description .Site.Params.description)
   "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "USD")
   "isAccessibleForFree" true
-  "author" (dict "@type" "Organization" "name" "Javai" "url" .Site.BaseURL)
+  "author" (dict "@type" "Organization" "name" "Mavai" "url" .Site.BaseURL)
 }}
 {{ with .Params.language }}{{ $app = merge $app (dict "programmingLanguage" .) }}{{ end }}
 <script type="application/ld+json">{{ $app | jsonify | safeJS }}</script>
@@ -84,7 +84,7 @@
   "datePublished" (.Date.Format "2006-01-02")
   "url" .Permalink
   "mainEntityOfPage" .Permalink
-  "publisher" (dict "@type" "Organization" "name" "Javai" "url" .Site.BaseURL "logo" (dict "@type" "ImageObject" "url" ($ogImage | absURL)))
+  "publisher" (dict "@type" "Organization" "name" "Mavai" "url" .Site.BaseURL "logo" (dict "@type" "ImageObject" "url" ($ogImage | absURL)))
 }}
 {{ with .Params.lastmod }}{{ $article = merge $article (dict "dateModified" (.Format "2006-01-02")) }}{{ end }}
 {{ with $author }}{{ $article = merge $article (dict "author" (dict "@type" "Person" "name" .name "url" .linkedin)) }}{{ end }}

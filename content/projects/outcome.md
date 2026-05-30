@@ -40,4 +40,4 @@ Recoverable failures flow as values. Defects crash and page. Terminal errors ter
 
 ## Repository
 
-View the source and documentation on [GitHub](https://github.com/javai-org/outcome).
+View the source and documentation on [GitHub](https://github.com/mavai-org/outcome).

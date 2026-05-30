@@ -1,34 +1,34 @@
-# Javai
+# Mavai
 
-> Javai builds open-source frameworks for **probabilistic testing** — verifying
+> Mavai builds open-source frameworks for **probabilistic testing** — verifying
 > non-deterministic software (LLM integrations, ML models, distributed and
 > randomised systems) with statistical inference instead of brittle pass/fail
 > assertions. Each execution is treated as a Bernoulli trial; the observed
 > success rate is evaluated against a threshold at a defined confidence level.
 
-Javai is the public home of the punit (Java), feotest (Rust), and javai-R
+Mavai is the public home of the punit (Java), feotest (Rust), and mavai-R
 (statistical oracle) projects. Note: "punit" here refers to the Java
 probabilistic testing framework, not the unrelated Python "punit" library.
 
 ## Guides
 
-- [Probabilistic Testing: how to test non-deterministic and AI systems](https://javai.org/probabilistic-testing/): Practical introduction — why deterministic tests fail on stochastic systems and how statistical testing replaces them.
+- [Probabilistic Testing: how to test non-deterministic and AI systems](https://mavai.org/probabilistic-testing/): Practical introduction — why deterministic tests fail on stochastic systems and how statistical testing replaces them.
 
 ## Projects
 
-- [punit](https://javai.org/projects/punit/): Probabilistic unit testing for Java, a JUnit 5 extension. Reference implementation. Repo: https://github.com/javai-org/punit
-- [punit examples](https://javai.org/projects/punitexamples/): Worked examples and patterns for punit.
-- [feotest](https://javai.org/projects/feotest/): Rust-native probabilistic testing framework.
-- [javai-R](https://javai.org/projects/javai-r/): Statistical oracle — R-generated conformance data validating every framework against the methodology.
-- [outcome](https://javai.org/projects/outcome/): Test outcome capture and trend analysis.
+- [punit](https://mavai.org/projects/punit/): Probabilistic unit testing for Java, a JUnit 5 extension. Reference implementation. Repo: https://github.com/mavai-org/punit
+- [punit examples](https://mavai.org/projects/punitexamples/): Worked examples and patterns for punit.
+- [feotest](https://mavai.org/projects/feotest/): Rust-native probabilistic testing framework.
+- [mavai-R](https://mavai.org/projects/mavai-r/): Statistical oracle — R-generated conformance data validating every framework against the methodology.
+- [outcome](https://mavai.org/projects/outcome/): Test outcome capture and trend analysis.
 
 ## Signals (essays)
 
-- [Shewhart, Toyota, and the Probabilistic Turn](https://javai.org/signals/2026-05-06-shewhart-toyota-and-the-probabilistic-turn/): Why probabilistic software demands the statistical discipline manufacturing absorbed a century ago.
-- [Deming, Challenger, and the AI Watershed](https://javai.org/signals/2026-04-19-deming-challenger-and-the-ai-watershed/): On quality, variation, and what Deming would say about AI.
+- [Shewhart, Toyota, and the Probabilistic Turn](https://mavai.org/signals/2026-05-06-shewhart-toyota-and-the-probabilistic-turn/): Why probabilistic software demands the statistical discipline manufacturing absorbed a century ago.
+- [Deming, Challenger, and the AI Watershed](https://mavai.org/signals/2026-04-19-deming-challenger-and-the-ai-watershed/): On quality, variation, and what Deming would say about AI.
 
 ## More
 
-- About: https://javai.org/about/
-- Contact: https://javai.org/contact/
-- RSS feed: https://javai.org/index.xml
+- About: https://mavai.org/about/
+- Contact: https://mavai.org/contact/
+- RSS feed: https://mavai.org/index.xml

@@ -1,6 +1,6 @@
-baseURL = 'https://javai.org/'
+baseURL = 'https://mavai.org/'
 locale = 'en'
-title = 'Javai — Testing Non-Deterministic Systems'
+title = 'Mavai — Testing Non-Deterministic Systems'
 enableRobotsTXT = true
 
 [outputs]
@@ -9,7 +9,7 @@ enableRobotsTXT = true
 
 [params]
   description = "Bringing solutions to difficult questions of testing non-deterministic systems, such as AI."
-  author = "Javai"
+  author = "Mavai"
   tagline = "Measure. Regress. Trust."
   ogImage = "images/og-default.png"
   # Search engine ownership verification. Paste the token from Google Search
@@ -20,7 +20,7 @@ enableRobotsTXT = true
   # Profiles linked from the Organization JSON-LD `sameAs`. Helps search engines
   # tie the site to known entities and disambiguate the "punit" name.
   sameAs = [
-    "https://github.com/javai-org",
+    "https://github.com/mavai-org",
     "https://www.linkedin.com/in/mike-franz-mannion/",
   ]
   keywords = [
@@ -48,7 +48,7 @@ enableRobotsTXT = true
 [params.analytics]
   # Full URL of the site-specific Plausible script. Empty string disables
   # analytics. The URL embeds the site ID (public; visible in page source).
-  # Different per site: javai.org and javai.ch each have their own script URL.
+  # Different per site: mavai.org and mavai.ch each have their own script URL.
   plausibleScriptUrl = "https://plausible.io/js/pa-R0QJ2aTt6MLM6ZeOCNBuT.js"
 
 # Author registry. Posts reference an author by key via the `author` frontmatter

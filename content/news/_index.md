@@ -1,4 +1,4 @@
 ---
 title: "News"
-description: "Announcements, release notes, and updates from the Javai project."
+description: "Announcements, release notes, and updates from the Mavai project."
 ---

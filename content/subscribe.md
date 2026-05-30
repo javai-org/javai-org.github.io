@@ -1,14 +1,14 @@
 ---
 title: "Subscribe"
-description: "Subscribe to the Javai RSS feed for updates on AI testing and probabilistic systems."
+description: "Subscribe to the Mavai RSS feed for updates on AI testing and probabilistic systems."
 ---
 
 ## RSS Feed
 
-Stay up to date with new posts from Javai. Copy the feed URL below into your preferred RSS reader:
+Stay up to date with new posts from Mavai. Copy the feed URL below into your preferred RSS reader:
 
 <p style="margin: 1.5rem 0;">
-  <code style="font-size: 1.05rem; padding: 0.5em 0.8em; display: inline-block;">https://javai.org/posts/index.xml</code>
+  <code style="font-size: 1.05rem; padding: 0.5em 0.8em; display: inline-block;">https://mavai.org/posts/index.xml</code>
 </p>
 
 **Recommended RSS readers:**

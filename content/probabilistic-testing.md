@@ -51,7 +51,7 @@ drift), and to **compliance** (verify against a mandated SLA/SLO threshold).
 
 ## Open-source frameworks for probabilistic testing
 
-The Javai project builds probabilistic testing frameworks across language
+The Mavai project builds probabilistic testing frameworks across language
 ecosystems, validated against a shared statistical oracle:
 
 - **[punit](/projects/punit/)** — probabilistic unit testing for **Java**, built
@@ -60,7 +60,7 @@ ecosystems, validated against a shared statistical oracle:
   checks. See the [worked examples](/projects/punitexamples/).
 - **[feotest](/projects/feotest/)** — a **Rust**-native probabilistic testing
   framework. Idiomatic Rust, not a port.
-- **[javai-R](/projects/javai-r/)** — the statistical oracle: R-generated
+- **[mavai-R](/projects/mavai-r/)** — the statistical oracle: R-generated
   conformance data that keeps every framework provably in step with the
   methodology.
 
@@ -72,5 +72,5 @@ process control. For the longer argument, see our Signals essays — including
 on why probabilistic software demands the discipline that manufacturing absorbed
 generations ago.
 
-Ready to start? The [punit repository](https://github.com/javai-org/punit) has
+Ready to start? The [punit repository](https://github.com/mavai-org/punit) has
 installation instructions and full documentation.

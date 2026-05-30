@@ -32,4 +32,4 @@ A simulated external payment service with contractual SLA obligations (99.99% av
 
 The project includes a mock LLM that requires no API keys, simulating realistic behaviour including temperature-sensitive reliability. Real LLM providers (OpenAI, Anthropic) can be enabled via environment variables.
 
-Browse the source and instructions on [GitHub](https://github.com/javai-org/punitexamples).
+Browse the source and instructions on [GitHub](https://github.com/mavai-org/punitexamples).

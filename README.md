@@ -1,19 +1,19 @@
-# Javai Website
+# Mavai Website
 
-This repository contains the source for [javai.org](https://javai.org/), a static website built with [Hugo](https://gohugo.io/). The site promotes open-source tools for testing non-deterministic systems (such as AI) and serves as the public presence for the Javai project.
+This repository contains the source for [mavai.org](https://mavai.org/), a static website built with [Hugo](https://gohugo.io/). The site promotes open-source tools for testing non-deterministic systems (such as AI) and serves as the public presence for the Mavai project.
 
 ## Domains
 
 | Domain        | Purpose                                                                                                       | Repository |
 |---------------|---------------------------------------------------------------------------------------------------------------|------------|
-| **javai.org** | Main site — open-source projects, blog posts on AI testing, probabilistic systems, and regulatory compliance  | This repo  |
-| **javai.ch**  | Swiss-specific content — FINMA regulations, Swiss enterprise and cantonal government AI concerns              | [javai-org/javai-ch](https://github.com/javai-org/javai-ch) |
+| **mavai.org** | Main site — open-source projects, blog posts on AI testing, probabilistic systems, and regulatory compliance  | This repo  |
+| **mavai.ch**  | Swiss-specific content — FINMA regulations, Swiss enterprise and cantonal government AI concerns              | [mavai-org/mavai-ch](https://github.com/mavai-org/mavai-ch) |
 
 ## Projects featured
 
-- **[punit](https://github.com/javai-org/punit)** — Probabilistic unit testing for Java (flagship)
-- **[punit examples](https://github.com/javai-org/punitexamples)** — Worked examples and patterns for punit
-- **[outcome](https://github.com/javai-org/outcome)** — Test outcome capture and trend analysis
+- **[punit](https://github.com/mavai-org/punit)** — Probabilistic unit testing for Java (flagship)
+- **[punit examples](https://github.com/mavai-org/punitexamples)** — Worked examples and patterns for punit
+- **[outcome](https://github.com/mavai-org/outcome)** — Test outcome capture and trend analysis
 
 ## Prerequisites
 
@@ -106,7 +106,7 @@ No manual build or deploy step is required.
 
 To point the domains at GitHub Pages, configure these DNS records in GoDaddy:
 
-**javai.org:**
+**mavai.org:**
 
 | Type  | Name | Value                    |
 |-------|------|--------------------------|
@@ -114,9 +114,9 @@ To point the domains at GitHub Pages, configure these DNS records in GoDaddy:
 | A     | @    | 185.199.109.153          |
 | A     | @    | 185.199.110.153          |
 | A     | @    | 185.199.111.153          |
-| CNAME | www  | javai-org.github.io      |
+| CNAME | www  | mavai-org.github.io      |
 
-**javai.ch** is managed in a [separate repository](https://github.com/javai-org/javai-ch).
+**mavai.ch** is managed in a [separate repository](https://github.com/mavai-org/mavai-ch).
 
 After configuring DNS, enable "Enforce HTTPS" in the GitHub Pages settings for the repository.
 
