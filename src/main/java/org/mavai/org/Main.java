@@ -1,9 +1,9 @@
 package org.mavai.org;
 
-import org.javai.newsroom.Newsroom;
-import org.javai.newsroom.NewsroomConfig;
-import org.javai.newsroom.feed.FeedMetadata;
-import org.javai.newsroom.schedule.TierFilter;
+import org.mavai.newsroom.Newsroom;
+import org.mavai.newsroom.NewsroomConfig;
+import org.mavai.newsroom.feed.FeedMetadata;
+import org.mavai.newsroom.schedule.TierFilter;
 
 import java.nio.file.Path;
 
