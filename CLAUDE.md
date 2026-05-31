@@ -1,8 +1,8 @@
 # Purpose
 
-This repository contains the source for [javai.org](https://javai.org/), an English Hugo static website focused on probabilistic testing solutions and related open source projects.
+This repository contains the source for [mavai.org](https://mavai.org/), an English Hugo static website focused on probabilistic testing solutions and related open source projects.
 
-The companion site [javai.ch](https://javai.ch/) (Swiss-specific regulatory content) is managed in a [separate repository](https://github.com/javai-org/javai-ch).
+The companion site [mavai.ch](https://mavai.ch/) (Swiss-specific regulatory content) is managed in a [separate repository](https://github.com/mavai-org/mavai-ch).
 
 The target audience is IT managers, software testing personnel, and experienced software developers.
 

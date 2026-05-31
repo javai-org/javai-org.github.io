@@ -1,27 +1,27 @@
-# REQ-ENGAGEMENT — Reader Engagement Infrastructure for javai.org
+# REQ-ENGAGEMENT — Reader Engagement Infrastructure for mavai.org
 
 ## Purpose
 
-Establish a lightweight, privacy-conscious infrastructure on javai.org for:
+Establish a lightweight, privacy-conscious infrastructure on mavai.org for:
 
 1. **Measuring readership** (who reads, from where, how deep).
 2. **Routing reader feedback** to channels the site owner can manage without exposing an email address or introducing a public comment surface to moderate.
 3. **Amplifying reach** via LinkedIn, where the target audience already lives.
 
-The same apparatus is intended for re-use on **javai.ch** with clearly-bounded adjustments. The plan is designed so that no code or configuration is site-specific except where explicitly flagged as such.
+The same apparatus is intended for re-use on **mavai.ch** with clearly-bounded adjustments. The plan is designed so that no code or configuration is site-specific except where explicitly flagged as such.
 
 ## Design constraints
 
-- **No public comment surface on javai.org itself.** All reader conversation is routed to LinkedIn, where existing moderation tools apply.
+- **No public comment surface on mavai.org itself.** All reader conversation is routed to LinkedIn, where existing moderation tools apply.
 - **No email address exposed** on the site. All direct-contact routes go through LinkedIn profiles.
-- **Privacy-respecting analytics.** No cookies, no personal data, EU-hosted where reasonable (Plausible). Important for credibility given javai.ch's focus on Swiss AI regulation.
+- **Privacy-respecting analytics.** No cookies, no personal data, EU-hosted where reasonable (Plausible). Important for credibility given mavai.ch's focus on Swiss AI regulation.
 - **No third-party JavaScript beyond analytics.** LinkedIn integration is zero-JS (plain hyperlinks and Open Graph meta tags).
-- **Supports multiple authors.** Even on javai.org (which has one curator today), the pattern supports an author registry so javai.ch's two-curator model can adopt the same code without refactor.
+- **Supports multiple authors.** Even on mavai.org (which has one curator today), the pattern supports an author registry so mavai.ch's two-curator model can adopt the same code without refactor.
 
 ## Out of scope
 
 - Email-based contact forms (mailto, Formspree, Basin, etc.).
-- Giscus / Disqus / any public comment system on javai.org.
+- Giscus / Disqus / any public comment system on mavai.org.
 - LinkedIn's Insight Tag (tracking pixel) — explicitly rejected on privacy grounds.
 - Cookie consent banner — not required under the privacy-respecting stack chosen here.
 - CMS or editorial workflow beyond what Hugo already provides.
@@ -35,8 +35,8 @@ Before any code changes:
 
 1. **Plausible account.**
    - Create a Plausible account at https://plausible.io.
-   - Add `javai.org` as a site; note the tracking script snippet (contains a `data-domain` attribute — that is the key parameter we need).
-   - (Later) add `javai.ch` as a second site on the same account.
+   - Add `mavai.org` as a site; note the tracking script snippet (contains a `data-domain` attribute — that is the key parameter we need).
+   - (Later) add `mavai.ch` as a second site on the same account.
    - Estimated cost: €9/month for both sites under the "Growth" plan or similar.
 
 Here's the plausible script snippet:
@@ -50,9 +50,9 @@ Here's the plausible script snippet:
 ```
 
 2. **LinkedIn profile URLs.**
-- Confirm the canonical LinkedIn profile URL for the javai.org curator (Michael Mannion)
+- Confirm the canonical LinkedIn profile URL for the mavai.org curator (Michael Mannion)
 - www.linkedin.com/in/mike-franz-mannion 
-- For javai.ch: confirm canonical LinkedIn profile URLs for both curators.
+- For mavai.ch: confirm canonical LinkedIn profile URLs for both curators.
 - www.linkedin.com/in/mike-franz-mannion
 - https://www.linkedin.com/in/helena-mannion-764348261/
 
@@ -74,7 +74,7 @@ The site uses three top-level content sections:
 
 - **Projects** (existing) — open-source project pages. Section URL: `/projects/`.
 - **Signals** (new) — long-form essays on software engineering in the age of LLMs. Section URL: `/signals/`. Home of the Challenger/Deming essay and anything like it in future.
-- **News** (renamed from `posts`) — site announcements, release notes, and updates. Section URL: `/news/`. The existing "Introducing Javai" welcome post moves here.
+- **News** (renamed from `posts`) — site announcements, release notes, and updates. Section URL: `/news/`. The existing "Introducing Mavai" welcome post moves here.
 
 ### Cooperating pieces
 
@@ -135,13 +135,13 @@ Additions to `hugo.toml`:
 ```toml
 [params.analytics]
   # Domain as registered in Plausible. Empty string disables analytics entirely.
-  plausibleDomain = "javai.org"
+  plausibleDomain = "mavai.org"
 
 [params.authors.michael]
   name = "Michael Mannion"
   linkedin = "https://www.linkedin.com/in/<handle>/"
 
-# For javai.ch, add a second author block:
+# For mavai.ch, add a second author block:
 # [params.authors.second-curator-key]
 #   name = "..."
 #   linkedin = "..."
@@ -199,7 +199,7 @@ Each step has a well-defined deliverable, a test, and an estimated effort. Steps
 **Test:**
 1. Run `hugo server` locally. View source; confirm the Plausible script is **absent**.
 2. Run `hugo` to build for production. Inspect `public/index.html`; confirm the Plausible script is **present** with the correct `data-domain`.
-3. After deploy, confirm Plausible dashboard registers a pageview within ~60 seconds of visiting https://javai.org.
+3. After deploy, confirm Plausible dashboard registers a pageview within ~60 seconds of visiting https://mavai.org.
 
 **Effort:** ~10 minutes.
 
@@ -358,7 +358,7 @@ Note: `linkedinPost` can start empty and be filled in after Step 8 completes.
    - Verify Plausible is recording pageviews.
    - Verify the essay URL is live.
    - Run LinkedIn Post Inspector on the essay URL to confirm OG card renders correctly.
-5. **Publish the LinkedIn Article/Post cross-post.** Copy the content from the essay; add the "Originally published at javai.org/..." line at the top.
+5. **Publish the LinkedIn Article/Post cross-post.** Copy the content from the essay; add the "Originally published at mavai.org/..." line at the top.
 6. Capture the LinkedIn post URL.
 7. Add the LinkedIn post URL to the essay's frontmatter as `linkedinPost` and re-deploy.
 
@@ -366,24 +366,24 @@ Note: `linkedinPost` can start empty and be filled in after Step 8 completes.
 
 ---
 
-## Per-site adjustments for javai.ch
+## Per-site adjustments for mavai.ch
 
-When the above apparatus is mirrored to javai.ch, the following — and only the following — should need to change:
+When the above apparatus is mirrored to mavai.ch, the following — and only the following — should need to change:
 
 1. **`hugo.toml`**
-   - `baseURL` (set to the javai.ch domain).
+   - `baseURL` (set to the mavai.ch domain).
    - `title`, `description`, `tagline`, `keywords` — site-specific content.
-   - `[params.analytics] plausibleDomain` — set to `javai.ch`.
-   - `[params.authors.*]` — add a block per curator (two curators for javai.ch). Each block carries the curator's `name` and `linkedin`.
-   - `ogImage` — javai.ch-specific default image.
+   - `[params.analytics] plausibleDomain` — set to `mavai.ch`.
+   - `[params.authors.*]` — add a block per curator (two curators for mavai.ch). Each block carries the curator's `name` and `linkedin`.
+   - `ogImage` — mavai.ch-specific default image.
 
-2. **Default OG image** — `static/images/hero.jpg` replaced with javai.ch-appropriate imagery.
+2. **Default OG image** — `static/images/hero.jpg` replaced with mavai.ch-appropriate imagery.
 
-3. **Plausible site** — add javai.ch as a second site on the same Plausible account.
+3. **Plausible site** — add mavai.ch as a second site on the same Plausible account.
 
-4. **Content frontmatter convention** — each javai.ch post declares `author: <curator-key>` in its frontmatter. The partial resolves the correct LinkedIn URLs per author automatically.
+4. **Content frontmatter convention** — each mavai.ch post declares `author: <curator-key>` in its frontmatter. The partial resolves the correct LinkedIn URLs per author automatically.
 
-5. **Content sections** — create `content/signals/` and `content/news/` with their own `_index.md` files if the javai.ch repo does not already have these sections. Menu entries in `hugo.toml` mirror the javai.org structure.
+5. **Content sections** — create `content/signals/` and `content/news/` with their own `_index.md` files if the mavai.ch repo does not already have these sections. Menu entries in `hugo.toml` mirror the mavai.org structure.
 
 **Expected mirror effort:** ~30–60 minutes, provided the directory structure and Hugo theme already match. Most of the time will be spent on content decisions (default image, site copy) rather than infrastructure code.
 
@@ -405,13 +405,13 @@ Each step is reversible. Plausible can be disabled by blanking `plausibleDomain`
 
 When the plan is fully executed:
 
-1. Plausible dashboard shows live pageview data for javai.org.
-2. Sharing a javai.org post URL to LinkedIn produces a rich preview card (title, description, image).
-3. Each post on javai.org carries a byline and an end-of-post engagement block with correctly resolved LinkedIn links.
+1. Plausible dashboard shows live pageview data for mavai.org.
+2. Sharing a mavai.org post URL to LinkedIn produces a rich preview card (title, description, image).
+3. Each post on mavai.org carries a byline and an end-of-post engagement block with correctly resolved LinkedIn links.
 4. No email address appears anywhere on the site.
 5. No third-party JavaScript loads beyond Plausible.
 6. No public comments are accepted on the site itself.
-7. The same mechanism is ready to be copied to javai.ch by populating the author registry and swapping the Plausible domain.
+7. The same mechanism is ready to be copied to mavai.ch by populating the author registry and swapping the Plausible domain.
 
 ## Review log
 

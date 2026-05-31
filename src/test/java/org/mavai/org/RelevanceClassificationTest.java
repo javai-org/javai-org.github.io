@@ -13,10 +13,10 @@ import java.nio.file.Path;
 import java.util.stream.Stream;
 
 /**
- * Probabilistic test for the javai.org relevance filter.
+ * Probabilistic test for the mavai.org relevance filter.
  *
  * <p>Verifies that the LLM + prompt combination matches human-determined
- * classifications at a statistically acceptable rate using javai.org-specific
+ * classifications at a statistically acceptable rate using mavai.org-specific
  * configuration and test data.
  */
 public class RelevanceClassificationTest {

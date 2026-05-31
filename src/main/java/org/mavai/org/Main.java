@@ -10,9 +10,9 @@ import java.nio.file.Path;
 public class Main {
 
     private static final FeedMetadata FEED_METADATA = new FeedMetadata(
-            "javai.org \u2014 Stochastic Software Feed",
+            "mavai.org \u2014 Stochastic Software Feed",
             "News on testing, validation, and engineering of probabilistic and AI systems",
-            "https://javai.org/",
+            "https://mavai.org/",
             "feed.xml"
     );
 
@@ -63,7 +63,7 @@ public class Main {
 
     private static void printUsage() {
         System.err.println("""
-                Usage: javai <command> [options]
+                Usage: mavai <command> [options]
 
                 Commands:
                   fetch     Fetch news from configured sources

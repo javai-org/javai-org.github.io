@@ -1,16 +1,16 @@
-# Mobile usability audit — javai.org
+# Mobile usability audit — mavai.org
 
-Companion to the javai.ch audit (see `javai-ch/plan/USABILITY.md`). This
-tracker records which of the three javai.ch-class defects were present
-on javai.org and how they were resolved.
+Companion to the mavai.ch audit (see `mavai-ch/plan/USABILITY.md`). This
+tracker records which of the three mavai.ch-class defects were present
+on mavai.org and how they were resolved.
 
 **Target viewport:** 390 × 844 (iPhone 14/15), with a 360 × 780 spot
 check. Phones only (≤480 px wide). iPad portrait and desktop were left
 alone.
 
-**Note on language coverage.** Unlike javai.ch, javai.org is
+**Note on language coverage.** Unlike mavai.ch, mavai.org is
 single-language (English). The German-text overflow concern that
-motivated several of javai.ch's fixes does not apply here. Measurements
+motivated several of mavai.ch's fixes does not apply here. Measurements
 below are English only.
 
 **Method.** Headless Chrome via CDP; geometry from `getBoundingClientRect`
@@ -52,8 +52,8 @@ two-sentence subtitle disappearing behind `overflow: hidden`.
 
 ## Fix — new `@media (max-width: 480px)` block
 
-Adapts javai.ch commits `54d155d` (phone breakpoint) and `78e529f`
-(hero + banner trim) to javai.org's actual CSS:
+Adapts mavai.ch commits `54d155d` (phone breakpoint) and `78e529f`
+(hero + banner trim) to mavai.org's actual CSS:
 
 - `.hero { min-height: 280px; }` (was 400 at 768).
 - `.hero .container { padding-top/bottom: var(--space-md); }` (was
@@ -119,7 +119,7 @@ from padding is still worth ~280 px.
 
 ## References
 
-- `javai-ch/plan/USABILITY.md` — the companion tracker.
-- javai-ch commits `54d155d` (phone breakpoint + compact nav) and
+- `mavai-ch/plan/USABILITY.md` — the companion tracker.
+- mavai-ch commits `54d155d` (phone breakpoint + compact nav) and
   `78e529f` (hero + banner trim).
 - Directive: `plan/DIRECTIVE-USABILITY.md`.

@@ -1,6 +1,6 @@
-rootProject.name = "javai"
+rootProject.name = "mavai"
 
-val newsroomDir = file("../javai-newsroom")
+val newsroomDir = file("../mavai-newsroom")
 if (newsroomDir.isDirectory) {
     includeBuild(newsroomDir) {
         dependencySubstitution {

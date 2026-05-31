@@ -26,7 +26,7 @@ dependencies {
 }
 
 application {
-    mainClass = "org.javai.org.Main"
+    mainClass = "org.mavai.org.Main"
 }
 
 tasks.test {
@@ -69,7 +69,7 @@ val siteDir = layout.buildDirectory.dir("site").get().asFile.absolutePath
 
 tasks.register<JavaExec>("fetchNews") {
     dependsOn("classes")
-    mainClass = "org.javai.org.Main"
+    mainClass = "org.mavai.org.Main"
     classpath = sourceSets["main"].runtimeClasspath
     args = mutableListOf("fetch", "--config=$configDir", "--state=$stateFile")
     if (project.hasProperty("tiers")) {
@@ -80,7 +80,7 @@ tasks.register<JavaExec>("fetchNews") {
 
 tasks.register<JavaExec>("generateFeed") {
     dependsOn("classes")
-    mainClass = "org.javai.org.Main"
+    mainClass = "org.mavai.org.Main"
     classpath = sourceSets["main"].runtimeClasspath
     args = listOf("generate", "--state=$stateFile", "--output=$siteDir")
 }
