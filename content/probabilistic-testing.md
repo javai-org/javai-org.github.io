@@ -55,7 +55,7 @@ The Mavai project builds probabilistic testing frameworks across language
 ecosystems, validated against a shared statistical oracle:
 
 - **[punit](/projects/punit/)** — probabilistic unit testing for **Java**, built
-  as a JUnit 5 extension. The reference implementation. Probabilistic tests,
+  as a JUnit 5 & 6 extension. The reference implementation. Probabilistic tests,
   experiment modes, latency percentiles, empirical baselines, and compliance
   checks. See the [worked examples](/projects/punitexamples/).
 - **[feotest](/projects/feotest/)** — a **Rust**-native probabilistic testing

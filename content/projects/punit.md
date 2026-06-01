@@ -1,12 +1,12 @@
 ---
 title: "punit"
-description: "A JUnit 5 extension for probabilistic testing of non-deterministic systems — explore, measure, and regression-test with statistical rigour."
-keywords: ["punit", "probabilistic unit testing", "JUnit 5 extension", "AI testing framework", "stochastic testing", "non-deterministic testing", "Java testing", "AI regression testing", "statistical assertions"]
+description: "A JUnit 5 & 6 extension for probabilistic testing of non-deterministic systems — explore, measure, and regression-test with statistical rigour."
+keywords: ["punit", "probabilistic unit testing", "JUnit 5 extension", "JUnit 6", "AI testing framework", "stochastic testing", "non-deterministic testing", "Java testing", "AI regression testing", "statistical assertions"]
 weight: 1
 language: "Java"
 ---
 
-**punit** is a JUnit 5 extension framework for probabilistic testing. It is designed for systems where behaviour is non-deterministic by nature — LLM integrations, ML model inference, distributed systems, and randomised algorithms.
+**punit** is a JUnit extension framework for probabilistic testing, compatible with JUnit 5 and 6. It is designed for systems where behaviour is non-deterministic by nature — LLM integrations, ML model inference, distributed systems, and randomised algorithms.
 
 ## How it works
 

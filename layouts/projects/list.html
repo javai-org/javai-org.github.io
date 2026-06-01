@@ -6,7 +6,7 @@
     {{ $pages := .Pages.ByWeight }}
     {{/* Language → icon filename mapping */}}
     {{ $icons := dict "R" "lang-r.svg" "Java" "lang-java.svg" "Rust" "lang-rust.svg" }}
-    {{ $labels := dict "Java" "Probabilistic testing for Java (JUnit 5)" "Rust" "Probabilistic testing for Rust" }}
+    {{ $labels := dict "Java" "Probabilistic testing for Java (JUnit 5 & 6)" "Rust" "Probabilistic testing for Rust" }}
     {{/* Render ungrouped projects (no language) first */}}
     {{ range $pages }}
       {{ if not .Params.language }}
