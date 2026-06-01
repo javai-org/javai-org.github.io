@@ -15,7 +15,7 @@ Instead of the traditional binary pass/fail model, punit executes a test multipl
 ## Key capabilities
 
 - **Probabilistic tests** (`@ProbabilisticTest`) — run a test method multiple times and evaluate the observed pass rate against a threshold, with configurable confidence levels
-- **Three experiment modes** — **Explore** (compare configurations with small samples), **Optimize** (iteratively tune parameters like temperature or prompts), and **Measure** (establish empirical baselines with 1000+ samples)
+- **Three experiment modes** (`@Experiment`) — **Explore** (compare configurations with small samples), **Optimize** (iteratively tune parameters like temperature or prompts), and **Measure** (establish empirical baselines with 1000+ samples)
 - **Use cases and service contracts** — define reusable success criteria with postconditions, derived checks, and duration constraints, evaluated in a fail-fast hierarchy
 - **Spec-driven baselines** — measurement experiments produce YAML spec files capturing observed success rates, confidence intervals, latency percentiles, and covariate values, committed to version control as regression baselines
 - **Latency assertions** — evaluate response times at percentile level (p50, p90, p95, p99), not averages, revealing tail behaviour that means hide
@@ -29,6 +29,37 @@ Instead of the traditional binary pass/fail model, punit executes a test multipl
 ## The parameter triangle
 
 You control two of three variables — sample size, confidence, and threshold — and statistics determines the third. punit supports three configuration approaches: sample-size-first, confidence-first, and threshold-first.
+
+## Add to your project
+
+punit is published to Maven Central under the `org.mavai` group. Depend on `punit-core` for the testing API, and add `punit-report` to write HTML and verdict-XML reports.
+
+**Gradle (Kotlin DSL):**
+
+```kotlin
+dependencies {
+    testImplementation("org.mavai:punit-core:0.9.0")
+    testImplementation("org.mavai:punit-report:0.9.0")
+    testImplementation("org.junit.jupiter:junit-jupiter")
+}
+```
+
+**Maven:**
+
+```xml
+<dependency>
+    <groupId>org.mavai</groupId>
+    <artifactId>punit-core</artifactId>
+    <version>0.9.0</version>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.mavai</groupId>
+    <artifactId>punit-report</artifactId>
+    <version>0.9.0</version>
+    <scope>test</scope>
+</dependency>
+```
 
 ## Get started
 

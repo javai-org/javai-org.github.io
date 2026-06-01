@@ -56,7 +56,13 @@
       "Bash(pip3 install *)",
       "WebFetch(domain:www.iso.org)",
       "Bash(git pull *)",
-      "Bash(echo \"---exit $?---\")"
+      "Bash(echo \"---exit $?---\")",
+      "Read(//Users/mikemannion/workspace/javai-orchestrator/feotest/**)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(cd ../feotest-examples)",
+      "Bash(sed -n '1,80p' README.md)",
+      "Bash(sed -n '1,12p' tests/shopping_basket_conformance_test.rs)",
+      "Bash(sed -n '1,20p' src/bin/sentinel.rs)"
     ]
   }
 }
