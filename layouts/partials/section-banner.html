@@ -10,6 +10,6 @@
   </picture>
   <div class="container">
     <h1>{{ .title }}</h1>
-    {{ with .subtitle }}<p class="section-banner-sub">{{ . }}</p>{{ end }}
+    {{ with .subtitle }}<p class="section-banner-sub">{{ . | safeHTML }}</p>{{ end }}
   </div>
 </section>

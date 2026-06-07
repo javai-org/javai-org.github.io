@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="description" content="{{ with .Description }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="keywords" content="{{ with .Params.keywords }}{{ delimit . ", " }}{{ else }}{{ delimit .Site.Params.keywords ", " }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 {{ with .Site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
@@ -9,7 +9,7 @@
 
 <!-- Open Graph -->
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:description" content="{{ with .Description }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="Mavai">
@@ -24,7 +24,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="twitter:description" content="{{ with .Description }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 {{ with $ogImage }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
 
 <!-- Canonical -->
@@ -66,7 +66,7 @@
   "url" .Permalink
   "applicationCategory" "DeveloperApplication"
   "operatingSystem" "Cross-platform"
-  "description" (or .Description .Site.Params.description)
+  "description" (plainify (or .Description .Site.Params.description))
   "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "USD")
   "isAccessibleForFree" true
   "author" (dict "@type" "Organization" "name" "Mavai" "url" .Site.BaseURL)
@@ -80,7 +80,7 @@
   "@context" "https://schema.org"
   "@type" "Article"
   "headline" .Title
-  "description" (or .Description .Params.summary)
+  "description" (plainify (or .Description .Params.summary))
   "datePublished" (.Date.Format "2006-01-02")
   "url" .Permalink
   "mainEntityOfPage" .Permalink
