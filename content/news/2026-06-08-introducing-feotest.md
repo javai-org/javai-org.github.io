@@ -3,7 +3,7 @@ title: "Introducing feotest"
 date: 2026-06-08
 author: michael
 description: "feotest brings probabilistic testing to Rust — a framework for services whose output varies by design. Version 0.1.0 is on crates.io."
-summary: "punit's approach, native to Rust. A non-deterministic service is treated as a stochastic service: establish a statistical baseline, then verify the service still meets it — with confidence intervals, latency distributions, and auditable verdicts. Version 0.1.0 is on crates.io."
+summary: "Probabilistic testing, native to Rust. A non-deterministic service is treated as a stochastic service: establish a statistical baseline, then verify the service still meets it — with confidence intervals, latency distributions, and auditable verdicts."
 keywords: ["feotest", "Rust", "probabilistic testing", "stochastic services", "crates.io", "punit", "release"]
 ---
 
@@ -11,7 +11,7 @@ The first release of [`feotest`](/projects/feotest/) is on [crates.io](https://c
 
 ## Why
 
-[punit](/projects/punit/) brought statistical testing to the JVM — run a test many times, then apply inference to decide whether a non-deterministic system is behaving acceptably. Rust teams building the same kind of system — LLM-backed services, stochastic devices, anything whose output varies by design — had no equivalent in their own language, until now.
+**mavai.org**'s [punit](/projects/punit/) brought statistical testing to the JVM — run a test many times, then apply inference to decide whether a non-deterministic system is behaving acceptably. Rust teams building the same kind of system — LLM-backed services, stochastic devices, anything whose output varies by design — had no equivalent in their own language, until now.
 
 ## What it does
 
