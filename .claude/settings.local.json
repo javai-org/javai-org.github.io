@@ -65,7 +65,12 @@
       "Bash(sed -n '1,20p' src/bin/sentinel.rs)",
       "mcp__codebase-memory-mcp__list_projects",
       "mcp__codebase-memory-mcp__search_code",
-      "mcp__codebase-memory-mcp__get_code_snippet"
+      "mcp__codebase-memory-mcp__get_code_snippet",
+      "Bash(awk 'NR>=9 && NR<=24' content/signals/2026-05-06-shewhart-toyota-and-the-probabilistic-turn.md)",
+      "Bash(awk 'NR>=9 && NR<=20' content/signals/2026-04-19-deming-challenger-and-the-ai-watershed.md)",
+      "Bash(awk 'NR>=10 && NR<=20' content/signals/2026-06-24-feotest-medical-showcase.md)",
+      "Bash(sort -t: -k2)",
+      "Bash(uniq -c -f1)"
     ]
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: "feotest: Verifiable Evidence for Rust Medical Devices"
-date: 2026-06-10
+date: 2026-06-24
 author: michael
 image: /images/feotest-crab-eeg-og.png
 description: "Every diagnostic device runs in a context where variability is inevitable — biological samples, reagent chemistry, electronics — so its output is stochastic. The open-source Rust framework feotest turns that variability into a repeatable <strong>measure → verify</strong> loop."

@@ -1,0 +1,58 @@
+---
+title: "When the Standard Demands Something the Test Cannot Deliver"
+subtitle: "And why we must do it anyway"
+date: 2026-06-17
+description: "ISO 26262 calls for an failure rate of 10⁻⁸ per hour of operation for its most safety-critical systems - that's one failure in 100 million hours or 11'400 years of operation. Erm... excuse me? Yet it turns out the standard isn't as nonsensical as it first seems. Understanding why teaches us about the limits of probabilistic testing - and why we must do it in spite of its limitations."
+author: michael
+image: /images/asil-d-ceo-composite.png
+linkedinPost: TBD
+summary: "Testing can never feasibly deliver failure rate statistics that an international standard like ISO 262262 demands. This article explains why, why it is still necessary, and why collecting data must not end in the lab."
+---
+
+<figure class="title-composite">
+  <img src="/images/asil-d-ceo-composite.png" alt="A stern executive in a suit patterned with spreadsheet figures, a speech bubble declaring: I accept no more than 1 failure per 11'400 years!">
+  <figcaption class="title-composite-caption">
+    <span>— ISO 26262, ASIL D (10⁻⁸ / h). He's not wrong.</span>
+  </figcaption>
+</figure>
+
+A safety standard opens with a number that looks innocent: [a dangerous-failure rate on the order of 10⁻⁸](https://www.iso.org/standard/68387.html) — one in a hundred million hours of operation. It is the bar a high-integrity automotive function is asked to clear. It reads like an engineering target concocted in a CEO's fever dream. It is, in fact, a statement about the limits of human knowledge.
+
+And the bar is not plucked from the air. Behind the wheel, real life kills at a rate of roughly [one fatality per million hours of driving](https://arxiv.org/abs/1708.06374) — about 10⁻⁶ per hour. A modern car runs dozens of safety-critical electronic functions at once, and most crashes trace to human error, not technical faults; so for electronics and software not to worsen the odds a driver already accepts, each function is apportioned a sliver of that budget — two orders of magnitude below the field rate, at 10⁻⁸ per hour. The number isn't a fantasy. It is the road's own fatality rate, divided up.
+
+Ask what it costs to *demonstrate* that bar by experiment, however, and a statistical rule of thumb — the "rule of three" — hits hard. Run N trials, observe no failure, and the most you may claim — at ninety-five per cent confidence — is a failure rate of roughly 3 ÷ N. Invert it: to show a rate of 10⁻⁸ you need three hundred million flawless trials. You read that right: Three. Hundred. Million.
+
+In the currency of the road, that is tens of thousands of years of incident-free driving, or the hundreds of millions of miles the autonomy world keeps quietly rediscovering. And that is the *generous* version, where nothing ever goes wrong. To *measure* such a rate — to see failures and count them i.e. to get a handle on the actual frequency — you would need ten times more.
+
+So the number on the first page is unreachable by the method on pages that follow. Testing is induction: you observe the finite and infer about the open, unobserved future, and the rule of three prices that inference to the decimal. Probabilistic testing has a calculable reach, and it stops orders of magnitude short of where the standard points. This is not a flaw to be engineered away. It is the edge of what experiment can do.
+
+And beyond that edge lies something worse than a statistical wall. [SOTIF](https://www.iso.org/standard/77490.html) (ISO 21448, *Safety Of The Intended Functionality*) gives it a name: the *unknown unknowns* — the triggering conditions and failure modes no one thought to put in the catalogue, much less test for. No confidence interval touches a failure you never imagined; more samples of the scenarios you *did* foresee buy you nothing against the ones you didn't. Which is why field testing is not optional padding — functional safety gives the [operation phase](https://www.iso.org/standard/68389.html) its own part of the standard. It is the only place the missing hundred million hours can ever accumulate — across a fleet, across years — and where the unimaginable eventually reveals itself.
+
+So what use is probabilistic testing good for if it cannot hope to deliver to the standard's demanded fidelity? This is the point the cynic misses. Field data, on its own, is anecdote. A near-miss in fog means nothing until you can say whether it is drift or merely weather — and you can only say that against a baseline the upfront *experiments* have built. The original probabilistic testing is what gives the field its eyes: it fixes the reference, draws the line between signal and noise, and clears away the common, measurable failures before they ship. The road, then, will seek out the rare residual. Omit probabilistic testing and the field stops being evidence, and reduces instead to body count.
+
+Of course, the software engineer knows this. Unit tests and code review catch what they can, cheaply; observability watches production for the rest — and no one calls the tests pointless because bugs still reach users. Phase drug trials catch the gross and the common; pharmacovigilance waits for the rare and the slow — and no one calls the trials pointless because such monitoring exists. And this is no longer merely prudent; it is mandated, and not only on the road. Wherever a system's behaviour is a distribution rather than a fact, the standards have reached the same verdict: medical devices carry an obligatory [post-market surveillance](https://www.iso.org/standard/67942.html) process under the EU MDR, and high-risk AI a required [post-market monitoring](https://artificialintelligenceact.eu/article/72/) plan — the field half written into law. Bound what you can, monitor what you cannot, and — above all — know which is which.
+
+Certainty was never an option. Every safety case ever written was a leap of faith. Probabilistic testing does not shorten the leap — it turns on the lights. The thing distinguishing an engineer from a gambler is that the former can see the edge they leap from.
+
+<aside class="tool-note">
+
+`feotest` is an open-source probabilistic testing framework for Rust, designed with automotive and medical domains in mind. It is built for the reachable half of the discipline this article describes — a `measure → verify` loop that fixes a statistically defined baseline, reports confidence-bounded floors instead of point scores, conditions every claim on its operating domain, and turns each release into a drift check against that baseline. It bounds what you *can* measure and gives the field the reference it needs to hunt the rest — and it is honest about the difference.
+
+And the loop need not end in the lab. Both feotest and its Java sibling [punit](https://mavai.org/projects/punit) carry a *sentinel*: a lightweight runtime agent that re-evaluates the very same distributional contract against the live system, on whatever cadence operations choose, and emits its verdicts to a log or a webhook. It is the same test the experiments ran, now pointed at production: the committed baseline is the reference each run is judged against, so when the live system falls below it the verdict flips — and you learn of the regression against a known line, not by surprise. That is precisely the half of the discipline the lab can never reach.
+
+Learn more at [mavai.org/projects/feotest](https://mavai.org/projects/feotest).
+
+</aside>
+
+## Sources
+
+| Source                                                                                                                                   | Relevance                                                                                                                                                          |
+|------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [ISO 26262-5:2018 — Road vehicles: Functional safety, Part 5 (Hardware)](https://www.iso.org/standard/68387.html)                        | Defines the random-hardware-failure target for the highest integrity level, ASIL D: ≤10⁻⁸ dangerous failures per hour — the number the essay opens on.             |
+| [Shalev-Shwartz, Shammah & Shashua, *On a Formal Model of Safe and Scalable Self-Driving Cars* (2017)](https://arxiv.org/abs/1708.06374) | States the real-world figure the target is anchored to: ~10⁻⁶ fatalities per hour of human driving.                                                                |
+| [ISO 21448:2022 — Road vehicles: Safety of the intended functionality (SOTIF)](https://www.iso.org/standard/77490.html)                  | Names the residual beyond statistics — functional insufficiencies and the *unknown unknowns* — and (Clause 13) makes field monitoring an operation-phase activity. |
+| [ISO 26262-7:2018 — Functional safety, Part 7 (Production, operation, service)](https://www.iso.org/standard/68389.html)                 | Gives the operation and field phase its own part of the functional-safety standard.                                                                                |
+| [ISO/TR 20416:2020 — Medical devices: Post-market surveillance for manufacturers](https://www.iso.org/standard/67942.html)               | The medical-device counterpart: a mandated, systematic process for monitoring performance in the field (per EU MDR 2017/745).                                      |
+| [EU AI Act, Article 72: Post-market monitoring](https://artificialintelligenceact.eu/article/72/)                                        | Requires providers of high-risk AI systems to monitor real-world performance across the system's lifetime — the field half written into law.                       |
+| [feotest](https://mavai.org/projects/feotest)                                                                                            | Open-source, Rust-native probabilistic-testing framework: the measure → verify loop for the reachable, lab half of the discipline.                                 |
+| [punit](https://mavai.org/projects/punit)                                                                                                | The Java sibling framework; like feotest it carries a *sentinel* for continuous, in-the-field drift detection against a committed baseline.                        |

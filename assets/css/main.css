@@ -509,6 +509,19 @@ pre code {
   }
 }
 
+/* In-article tool aside — reuses the project-card vocabulary to mark
+   the feotest coda as a distinct subject without a heading. */
+.tool-note {
+  background: var(--color-surface);
+  border: 1px solid var(--color-accent);
+  border-left: 5px solid var(--color-accent);
+  padding: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.tool-note > :first-child { margin-top: 0; }
+.tool-note > :last-child { margin-bottom: 0; }
+
 /* Inline diagram (body-figure with caption) */
 .inline-diagram {
   margin: var(--space-lg) auto;
