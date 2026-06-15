@@ -1,7 +1,7 @@
 ---
 title: "When the Standard Demands Something the Test Cannot Deliver"
 subtitle: "And why we must do it anyway"
-date: 2026-06-17
+date: 2026-06-15
 description: "ISO 26262 calls for an failure rate of 10⁻⁸ per hour of operation for its most safety-critical systems - that's one failure in 100 million hours or 11'400 years of operation. Erm... excuse me? Yet it turns out the standard isn't as nonsensical as it first seems. Understanding why teaches us about the limits of probabilistic testing - and why we must do it in spite of its limitations."
 author: michael
 image: /images/asil-d-ceo-composite.png
