@@ -70,7 +70,12 @@
       "Bash(awk 'NR>=9 && NR<=20' content/signals/2026-04-19-deming-challenger-and-the-ai-watershed.md)",
       "Bash(awk 'NR>=10 && NR<=20' content/signals/2026-06-24-feotest-medical-showcase.md)",
       "Bash(sort -t: -k2)",
-      "Bash(uniq -c -f1)"
+      "Bash(uniq -c -f1)",
+      "Bash(hugo version *)",
+      "Bash(hugo server *)",
+      "mcp__plugin_context-mode_context-mode__ctx_execute",
+      "WebFetch(domain:www.houseofsound.ch)",
+      "WebFetch(domain:commons.wikimedia.org)"
     ]
   }
 }

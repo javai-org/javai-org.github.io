@@ -484,6 +484,27 @@ pre code {
   margin: 0;
 }
 
+/* Two-up variant: two separately-licensed images laid side by side (rather
+   than a single pre-merged composite), each keeping its own credit. Both
+   panels share one portrait aspect ratio and crop to fill it (object-fit:
+   cover), so source images of differing dimensions render as equal-height
+   halves without manual cropping. */
+.title-composite--duo .title-composite-pair {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.title-composite--duo .title-composite-pair img {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  max-width: 340px;
+  aspect-ratio: 769 / 1025;
+  object-fit: cover;
+}
+
 .title-composite-caption {
   display: flex;
   justify-content: space-between;
@@ -506,6 +527,17 @@ pre code {
   .title-composite-caption {
     flex-direction: column;
     gap: var(--space-xs);
+  }
+
+  .title-composite--duo .title-composite-pair {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-composite--duo .title-composite-pair img {
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 80%;
   }
 }
 
