@@ -75,7 +75,13 @@
       "Bash(hugo server *)",
       "mcp__plugin_context-mode_context-mode__ctx_execute",
       "WebFetch(domain:www.houseofsound.ch)",
-      "WebFetch(domain:commons.wikimedia.org)"
+      "WebFetch(domain:commons.wikimedia.org)",
+      "Bash(git commit -m 'Republish feotest medical-device showcase signal *)",
+      "Bash(gh run *)",
+      "Bash(git commit -m 'Reclassify feotest medical-device showcase as a news item *)",
+      "Bash(git fetch *)",
+      "Bash(git rev-list *)",
+      "Bash(gh workflow *)"
     ]
   }
 }

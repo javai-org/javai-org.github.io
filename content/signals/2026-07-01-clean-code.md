@@ -34,7 +34,7 @@ And yet the system may still be wrong.
 
 The abstractions may be decorative rather than useful. The domain language may be absent or misleading. The tests may assert incidental behaviour while leaving the real business invariants unprotected. The database migrations may exist but fail to reflect an intentional model of change. Logging may be abundant but useless. Boundaries may follow framework fashion rather than business meaning. Every file may look acceptable, while the system as a whole fails to cohere.
 
-This is why clean code has probably never mattered more.
+*This is why clean code has probably never mattered more.*
 
 Not because AI threatens software engineering. It does not. Used well, AI is an extraordinary accelerator. A strong engineer with a capable model can now explore designs, generate scaffolding, write tests, interrogate unfamiliar APIs, and collapse days of mechanical work into minutes. For people with taste, discipline, and architectural judgement, this is a veritable new superpower.
 
@@ -42,7 +42,7 @@ But that is exactly the point. AI amplifies the judgement already present in the
 
 ## Clean code is not prettiness
 
-One of the reasons this subject is so easily trivialised is that "clean code" is often mistaken for an aesthetic preference.
+One of the reasons this subject is so easily trivialised is that "clean code" is often mistaken for aesthetic preference.
 
 To some people it means nice formatting. To others it means short methods, good variable names, low cyclomatic complexity, or a pleasing absence of obvious mess. These things matter. They are useful signals. But they are not the substance of the matter.
 
