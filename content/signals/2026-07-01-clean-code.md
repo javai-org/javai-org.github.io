@@ -72,13 +72,15 @@ When code was slower to produce, architectural mistakes accumulated at human spe
 
 This does not mean the code is worse in every local respect. In fact, that is the trap. The generated endpoint may be better than what many teams would have written by hand. The migration may be adequate. The class structure may look sensible. The pull request may contain tests. The demo may work.
 
+That is because the model's fluency is genuinely earned - just aimed at the wrong target. It has been trained on millions of lines of code drawn from thousands of other domains, so by default it reaches for whatever shape is statistically common across all of them: the familiar layering, the standard naming, the textbook pattern. Those shapes are not bad. They are often exactly right - for a generic domain. Where they happen to fit yours, the fit is incidental: the model has no privileged signal about your business, only about everyone else's – unless someone intimate with both the patterns and the domain is at the wheel.
+
 But software systems do not fail only because individual files are badly written. They fail because the concepts do not fit together. They fail because coupling accumulates quietly. They fail because responsibilities are blurred. They fail because no one can say what the system is supposed to mean. They fail because every change requires an archaeological expedition.
 
 A codebase can look clean in the small and still be rotten in the large.
 
 That is the coming refactor wave: not exactly a mass of ugly AI-generated code, but a mass of plausible, locally acceptable, structurally incoherent code that organisations ship before anyone with architectural judgement had a chance to weigh in.
 
-## Who catches the wrongness
+## Who catches the wrongness?
 
 In the AI era, "senior developer" cannot be allowed to mean "person who has been around long enough to approve the pull request." It has to mean something stronger. A senior engineer must be able to look at plausible code and ask: what concept is this really expressing? Which dependency direction is being introduced here? What invariant is unprotected? Is this abstraction buying optionality, or merely adding ceremony? Does this test protect behaviour, or only freeze implementation detail?
 
