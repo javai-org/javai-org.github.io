@@ -4,6 +4,7 @@ subtitle: "When code was slower to produce, architectural mistakes accumulated a
 date: 2026-07-01
 description: "AI does not merely produce more code - it produces more plausible code. A weak codebase generated with AI can look professional while remaining structurally incoherent, which is exactly why architectural judgement matters more now than ever."
 author: michael
+linkedinPost: https://www.linkedin.com/pulse/clean-code-never-more-important-mike-mannion-wdgte/
 summary: "AI amplifies the judgement already present in an organisation; it does not supply the judgement that is missing. Clean code is not prettiness - it is the structure that lets a competent human understand the problem. In the AI era, it is the steering wheel."
 ---
 
